@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container hero-content">
+    <h1 class="glitch" data-text="Bharadhwaj K">Bharadhwaj K</h1>
+    <h2 class="typing-text">I am a <span id="typewriter"></span></h2>
+    <p class="hero-bio">{{ site.data.resume.personal_info.location }} based engineer passionate about RISC-V, Hardware Verification, and Full-Stack Development.</p>
+    <div class="cta-buttons">
+      <a href="/projects/" class="btn btn-primary">View Work</a>
+      <a href="/about/" class="btn btn-outline">About Me</a>
+    </div>
+  </div>
+  <div class="hero-background">
+    <!-- Particles or abstract shapes can go here via CSS -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+</section>
+
+<section class="featured-projects section">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      {% for project in site.data.resume.projects limit:3 %}
+      <div class="project-card fade-in">
+        <div class="card-header">
+          <i class="far fa-folder-open"></i>
+          <div class="card-links">
+            {% if project.github != "" %}
+            <a href="{{ project.github }}" target="_blank"><i class="fab fa-github"></i></a>
+            {% endif %}
+          </div>
+        </div>
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description[0] | truncate: 120 }}</p>
+        <ul class="tech-stack">
+          {% for tech in project.technologies limit:4 %}
+          <li>{{ tech }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="center-btn">
+      <a href="/projects/" class="btn btn-text">View All Projects <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section section">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-wrapper">
+      <div class="skill-category fade-in">
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          {% for skill in site.data.resume.skills.programming_languages.items %}
+          <span class="tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="skill-category fade-in">
+        <h3>Hardware</h3>
+        <div class="skill-tags">
+          {% for skill in site.data.resume.skills.hardware_embedded.items %}
+          <span class="tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="skill-category fade-in">
+        <h3>Web</h3>
+        <div class="skill-tags">
+          {% for skill in site.data.resume.skills.web_technologies.items %}
+          <span class="tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
