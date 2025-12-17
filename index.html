@@ -4,176 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bharadhwaj K | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Cursor Glow Effect -->
-    <div class="cursor-glow"></div>
-    
-    <!-- Particle Background -->
-    <canvas id="particles"></canvas>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="gradient-bg"></div>
+        <div class="particles" id="particles"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">BK</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
 
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="logo">
-                <span class="logo-bracket">&lt;</span>BK<span class="logo-bracket">/&gt;</span>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">&lt;BK/&gt;</span>
             </a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
-                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">
+                        <span class="nav-number">01.</span>Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <span class="nav-number">02.</span>About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">
+                        <span class="nav-number">03.</span>Experience
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">
+                        <span class="nav-number">04.</span>Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">
+                        <span class="nav-number">05.</span>Skills
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <span class="nav-number">06.</span>Contact
+                    </a>
+                </li>
             </ul>
+            
             <div class="nav-social">
-                <a href="https://github.com/narutoulumaki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/narutoulumaki" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <p class="hero-subtitle animate-text">
-                    <span class="wave">👋</span> Hello, I'm
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting" data-aos="fade-up" data-aos-delay="100">
+                    <span class="wave">👋</span> Hi there, I'm
                 </p>
-                <h1 class="hero-title animate-text">
-                    <span class="gradient-text">Bharadhwaj K</span>
+                <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
+                    <span class="name-gradient">Bharadhwaj K</span>
                 </h1>
-                <h2 class="hero-role animate-text">
-                    I build <span class="typewriter-wrapper"><span class="typewriter"></span><span class="cursor">|</span></span>
+                <h2 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+                    I build <span class="typing-text" id="typing-text"></span><span class="typing-cursor">|</span>
                 </h2>
-                <p class="hero-description animate-text">
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
                     Research Intern at <span class="highlight">CHIPS, PES University</span>. 
-                    Passionate about building high-performance systems from 
-                    <span class="highlight">hardware</span> to <span class="highlight">web</span>.
+                    Passionate about <span class="highlight">RISC-V Architecture</span>, 
+                    <span class="highlight">Hardware Verification</span>, and 
+                    <span class="highlight">Full-Stack Development</span>.
                 </p>
-                <div class="hero-cta animate-text">
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
                     <a href="#projects" class="btn btn-primary">
                         <span>View My Work</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#contact" class="btn btn-ghost">
+                    <a href="#contact" class="btn btn-secondary">
                         <span>Get In Touch</span>
                     </a>
                 </div>
-                <div class="hero-stats animate-text">
-                    <div class="stat">
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-item">
                         <span class="stat-number" data-target="10">0</span>+
                         <span class="stat-label">Projects</span>
                     </div>
-                    <div class="stat">
+                    <div class="stat-item">
                         <span class="stat-number" data-target="2">0</span>+
                         <span class="stat-label">Years Exp</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="5">0</span>+
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span>+
                         <span class="stat-label">Technologies</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="floating-card card-1">
-                    <i class="fas fa-microchip"></i>
-                    <span>RISC-V</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-code"></i>
-                    <span>Full-Stack</span>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-brain"></i>
-                    <span>AI/ML</span>
-                </div>
-                <div class="code-window">
-                    <div class="window-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="window-title">bharadhwaj.py</span>
+            
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                <div class="hero-image-container">
+                    <div class="hero-image-bg"></div>
+                    <div class="hero-avatar">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-content">
+                            <i class="fas fa-code"></i>
+                        </div>
                     </div>
-                    <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">Engineer</span>:
-    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
-        <span class="param">self</span>.name = <span class="string">"Bharadhwaj"</span>
-        <span class="param">self</span>.skills = [
-            <span class="string">"RISC-V"</span>,
-            <span class="string">"Full-Stack"</span>,
-            <span class="string">"AI/ML"</span>
+                    <div class="floating-icons">
+                        <div class="float-icon icon-1"><i class="fab fa-python"></i></div>
+                        <div class="float-icon icon-2"><i class="fas fa-microchip"></i></div>
+                        <div class="float-icon icon-3"><i class="fab fa-react"></i></div>
+                        <div class="float-icon icon-4"><i class="fas fa-brain"></i></div>
+                        <div class="float-icon icon-5"><i class="fab fa-js"></i></div>
+                    </div>
+                </div>
+                <div class="code-card">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">engineer.py</span>
+                    </div>
+                    <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-class">Engineer</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-string">"Bharadhwaj"</span>
+        <span class="code-param">self</span>.role = <span class="code-string">"Research Intern"</span>
+        <span class="code-param">self</span>.skills = [
+            <span class="code-string">"RISC-V"</span>,
+            <span class="code-string">"Full-Stack"</span>,
+            <span class="code-string">"AI/ML"</span>
         ]
     
-    <span class="keyword">def</span> <span class="function">create</span>(<span class="param">self</span>):
-        <span class="keyword">return</span> <span class="string">"Innovation"</span> <span class="blink">▌</span></code></pre>
+    <span class="code-keyword">def</span> <span class="code-function">build</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Innovation"</span></code></pre>
                 </div>
             </div>
         </div>
+        
         <div class="scroll-indicator">
-            <span>Scroll Down</span>
             <div class="mouse">
                 <div class="wheel"></div>
             </div>
+            <span>Scroll Down</span>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section about-section">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">01.</span>
-                <span>About Me</span>
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">02.</span>
+                <span class="title-text">About Me</span>
                 <span class="title-line"></span>
             </h2>
-            <div class="about-grid">
-                <div class="about-content">
-                    <p class="about-text">
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>
                         I'm an <span class="highlight">Electronics and Communication Engineering</span> student 
                         at PES University, Bangalore. My passion lies at the intersection of 
                         <span class="highlight">hardware design</span> and <span class="highlight">software development</span>.
                     </p>
-                    <p class="about-text">
+                    <p>
                         Currently, I'm conducting research on <span class="highlight">RISC-V performance analysis</span> 
-                        and optimization. I love building tools that make systems faster and more efficient.
+                        and optimization at CHIPS Lab. I love building tools that make systems faster and more efficient.
                     </p>
-                    <p class="about-text">
+                    <p>
                         When I'm not coding, you'll find me exploring new technologies, 
                         contributing to open-source, or diving deep into system architecture.
                     </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>B.Tech in ECE</h4>
-                                <p>PES University • 2022 - 2026</p>
+                    
+                    <div class="about-cards">
+                        <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Education</h4>
+                                <p>B.Tech in ECE</p>
+                                <span class="card-meta">PES University • 2022-2026</span>
                                 <span class="badge">CGPA: 7.29/10</span>
                             </div>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
+                        <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="card-content">
                                 <h4>Location</h4>
                                 <p>Bangalore, India</p>
+                                <span class="card-meta">Open to opportunities</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
+                
+                <div class="about-image" data-aos="fade-left">
                     <div class="image-wrapper">
-                        <div class="image-border"></div>
+                        <div class="image-frame"></div>
                         <div class="image-placeholder">
-                            <i class="fas fa-user-astronaut"></i>
+                            <div class="placeholder-content">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
                         </div>
+                        <div class="image-decoration"></div>
                     </div>
                 </div>
             </div>
@@ -181,29 +256,54 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section">
+    <section id="experience" class="section experience-section">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">02.</span>
-                <span>Experience</span>
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">03.</span>
+                <span class="title-text">Experience</span>
                 <span class="title-line"></span>
             </h2>
-            <div class="experience-tabs">
-                <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="chips">CHIPS</button>
-                    <button class="tab-btn" data-tab="pesu">PES University</button>
+            
+            <div class="experience-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="exp-tabs">
+                    <button class="exp-tab active" data-tab="chips">
+                        <span class="tab-indicator"></span>
+                        CHIPS Lab
+                    </button>
+                    <button class="exp-tab" data-tab="pesu">
+                        <span class="tab-indicator"></span>
+                        PES University
+                    </button>
                 </div>
-                <div class="tab-content">
-                    <div class="tab-panel active" id="chips">
-                        <h3 class="job-title">Research Intern <span class="company">@ CHIPS, PES University</span></h3>
-                        <p class="job-duration"><i class="far fa-calendar-alt"></i> May 2025 - Present</p>
-                        <ul class="job-details">
-                            <li>Conducting research on performance analysis and optimization techniques for RISC-V systems</li>
-                            <li>Developing cycle-accurate profiling tools using Python and C++ for processor performance analysis</li>
-                            <li>Building automation scripts for data collection, preprocessing, and analysis pipelines</li>
-                            <li>Integrating profiler with InCore's Azurite core for testing and validation</li>
+                
+                <div class="exp-panels">
+                    <div class="exp-panel active" id="panel-chips">
+                        <h3 class="exp-title">
+                            Research Intern <span class="exp-company">@ CHIPS, PES University</span>
+                        </h3>
+                        <p class="exp-date">
+                            <i class="far fa-calendar-alt"></i>
+                            May 2025 — Present
+                        </p>
+                        <ul class="exp-list">
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Conducting research on performance analysis and optimization techniques for RISC-V systems
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Developing cycle-accurate profiling tools using Python and C++ for processor performance analysis
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Building automation scripts for data collection, preprocessing, and analysis pipelines
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Integrating profiler with InCore's Azurite core for testing and validation
+                            </li>
                         </ul>
-                        <div class="job-tech">
+                        <div class="exp-tech">
                             <span>RISC-V</span>
                             <span>Python</span>
                             <span>C++</span>
@@ -211,16 +311,34 @@
                             <span>Linux</span>
                         </div>
                     </div>
-                    <div class="tab-panel" id="pesu">
-                        <h3 class="job-title">Teaching Assistant <span class="company">@ PES University</span></h3>
-                        <p class="job-duration"><i class="far fa-calendar-alt"></i> Aug 2024 - Jan 2025</p>
-                        <ul class="job-details">
-                            <li>Technical TA for 5-day workshop on Standard Cell Design using SCL PDK 180nm (NXP Semiconductors)</li>
-                            <li>Guided 60+ participants through complete backend flow including custom layout and characterization</li>
-                            <li>Conducted workshops on RTL-to-GDS flow and digital design concepts</li>
-                            <li>Mentored students on technical projects and helped debug complex issues</li>
+                    
+                    <div class="exp-panel" id="panel-pesu">
+                        <h3 class="exp-title">
+                            Teaching Assistant <span class="exp-company">@ PES University</span>
+                        </h3>
+                        <p class="exp-date">
+                            <i class="far fa-calendar-alt"></i>
+                            Aug 2024 — Jan 2025
+                        </p>
+                        <ul class="exp-list">
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Technical TA for 5-day workshop on Standard Cell Design using SCL PDK 180nm (NXP Semiconductors)
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Guided 60+ participants through complete backend flow including custom layout and characterization
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Conducted workshops on RTL-to-GDS flow and digital design concepts
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Mentored students on technical projects and helped debug complex issues
+                            </li>
                         </ul>
-                        <div class="job-tech">
+                        <div class="exp-tech">
                             <span>VLSI</span>
                             <span>Digital Design</span>
                             <span>Cadence</span>
@@ -233,34 +351,31 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section projects-section">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">03.</span>
-                <span>Featured Projects</span>
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">04.</span>
+                <span class="title-text">Featured Projects</span>
                 <span class="title-line"></span>
             </h2>
+            
             <div class="projects-grid">
-                <!-- Project 1: Book Recommendations Microservices -->
-                <div class="project-card" data-project="book-recommendations">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-image">
-                        <div class="project-overlay">
-                            <button class="view-project-btn">
-                                <i class="fas fa-expand"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                        <div class="project-icon">
+                        <div class="project-image-bg">
                             <i class="fas fa-book-reader"></i>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-top">
-                            <span class="project-label">Featured Project</span>
+                        <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/narutoulumaki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/narutoulumaki" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Featured Project</span>
                         <h3 class="project-title">Book Recommendations Microservices</h3>
                         <p class="project-description">
                             Microservices architecture for book recommendations with user authentication, 
@@ -275,27 +390,23 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 2: RISC-V Performance Profiler -->
-                <div class="project-card" data-project="riscv-profiler">
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-image">
-                        <div class="project-overlay">
-                            <button class="view-project-btn">
-                                <i class="fas fa-expand"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                        <div class="project-icon">
+                        <div class="project-image-bg">
                             <i class="fas fa-microchip"></i>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-top">
-                            <span class="project-label">Featured Project</span>
+                        <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/narutoulumaki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/narutoulumaki" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Research Project</span>
                         <h3 class="project-title">RISC-V Performance Profiler</h3>
                         <p class="project-description">
                             Profiling application for RISC-V instruction analysis with automated report 
@@ -309,27 +420,23 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 3: PD-YOLOv7 Research -->
-                <div class="project-card" data-project="yolov7">
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-image">
-                        <div class="project-overlay">
-                            <button class="view-project-btn">
-                                <i class="fas fa-expand"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                        <div class="project-icon">
+                        <div class="project-image-bg">
                             <i class="fas fa-robot"></i>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-top">
-                            <span class="project-label">Research Project</span>
+                        <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/narutoulumaki/PD-YOLOv7-Research" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/narutoulumaki/PD-YOLOv7-Research" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">AI/ML Research</span>
                         <h3 class="project-title">PD-YOLOv7 Research</h3>
                         <p class="project-description">
                             Object detection compression using knowledge distillation-guided pruning 
@@ -343,27 +450,23 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 4: Binance Trading Bot -->
-                <div class="project-card" data-project="binance-bot">
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-image">
-                        <div class="project-overlay">
-                            <button class="view-project-btn">
-                                <i class="fas fa-expand"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                        <div class="project-icon">
+                        <div class="project-image-bg">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-top">
-                            <span class="project-label">Featured Project</span>
+                        <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/narutoulumaki/Binance-trading-bot" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/narutoulumaki/Binance-trading-bot" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">FinTech</span>
                         <h3 class="project-title">Binance Futures Trading Bot</h3>
                         <p class="project-description">
                             Algorithmic trading bot for Binance Futures with order management, 
@@ -377,27 +480,23 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 5: PES-IEEE Conference Site -->
-                <div class="project-card" data-project="ieee-site">
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-image">
-                        <div class="project-overlay">
-                            <button class="view-project-btn">
-                                <i class="fas fa-expand"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                        <div class="project-icon">
+                        <div class="project-image-bg">
                             <i class="fas fa-globe"></i>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-top">
-                            <span class="project-label">Web Development</span>
+                        <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/Vaarun-Kamath/PES-IEEE-Conference-Site" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Vaarun-Kamath/PES-IEEE-Conference-Site" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Web Development</span>
                         <h3 class="project-title">PES-IEEE Conference Site</h3>
                         <p class="project-description">
                             Full-stack conference website handling 500+ attendees with dynamic navigation, 
@@ -411,27 +510,23 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 6: Single Cycle RISC-V Processor -->
-                <div class="project-card" data-project="riscv-processor">
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-image">
-                        <div class="project-overlay">
-                            <button class="view-project-btn">
-                                <i class="fas fa-expand"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                        <div class="project-icon">
+                        <div class="project-image-bg">
                             <i class="fas fa-memory"></i>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-top">
-                            <span class="project-label">Hardware Design</span>
+                        <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/narutoulumaki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/narutoulumaki" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Hardware Design</span>
                         <h3 class="project-title">Single Cycle RISC-V Processor</h3>
                         <p class="project-description">
                             Complete single-cycle RISC-V processor supporting RV32I instruction set 
@@ -445,8 +540,9 @@
                     </div>
                 </div>
             </div>
-            <div class="projects-cta">
-                <a href="https://github.com/narutoulumaki" target="_blank" class="btn btn-outline-large">
+            
+            <div class="projects-cta" data-aos="fade-up">
+                <a href="https://github.com/narutoulumaki" target="_blank" class="btn btn-secondary">
                     <i class="fab fa-github"></i>
                     <span>View All Projects on GitHub</span>
                 </a>
@@ -454,152 +550,131 @@
         </div>
     </section>
 
-    <!-- Project Modal -->
-    <div class="project-modal" id="projectModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-header">
-                <div class="modal-icon" id="modalIcon"></div>
-                <div class="modal-title-section">
-                    <span class="modal-label" id="modalLabel"></span>
-                    <h2 class="modal-title" id="modalTitle"></h2>
-                </div>
-            </div>
-            <div class="modal-body">
-                <p class="modal-description" id="modalDescription"></p>
-                <div class="modal-features">
-                    <h4>Key Features</h4>
-                    <ul id="modalFeatures"></ul>
-                </div>
-                <div class="modal-tech">
-                    <h4>Technologies Used</h4>
-                    <div class="tech-tags" id="modalTech"></div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn btn-primary" id="modalGithub" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <span>View on GitHub</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- Skills Section -->
-    <section id="skills" class="section">
+    <section id="skills" class="section skills-section">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">04.</span>
-                <span>Skills & Technologies</span>
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">05.</span>
+                <span class="title-text">Skills & Technologies</span>
                 <span class="title-line"></span>
             </h2>
-            <div class="skills-container">
-                <div class="skill-category">
+            
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                     <div class="category-header">
-                        <i class="fas fa-code"></i>
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
                         <h3>Languages</h3>
                     </div>
                     <div class="skill-items">
-                        <div class="skill-item" data-skill="Python">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
                             <span>Python</span>
                         </div>
-                        <div class="skill-item" data-skill="C++">
-                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
                             <span>C++</span>
                         </div>
-                        <div class="skill-item" data-skill="JavaScript">
-                            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
                             <span>JavaScript</span>
                         </div>
-                        <div class="skill-item" data-skill="TypeScript">
-                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
                             <span>TypeScript</span>
                         </div>
-                        <div class="skill-item" data-skill="SystemVerilog">
-                            <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-microchip"></i>
                             <span>SystemVerilog</span>
                         </div>
-                        <div class="skill-item" data-skill="SQL">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
                             <span>SQL</span>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                     <div class="category-header">
-                        <i class="fas fa-globe"></i>
+                        <div class="category-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
                         <h3>Web Technologies</h3>
                     </div>
                     <div class="skill-items">
-                        <div class="skill-item" data-skill="React">
-                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
                             <span>React</span>
                         </div>
-                        <div class="skill-item" data-skill="Next.js">
-                            <div class="skill-icon"><i class="fas fa-n"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-n"></i>
                             <span>Next.js</span>
                         </div>
-                        <div class="skill-item" data-skill="Node.js">
-                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
                             <span>Node.js</span>
                         </div>
-                        <div class="skill-item" data-skill="Tailwind">
-                            <div class="skill-icon"><i class="fas fa-wind"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-wind"></i>
                             <span>Tailwind</span>
                         </div>
-                        <div class="skill-item" data-skill="Supabase">
-                            <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-bolt"></i>
                             <span>Supabase</span>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                     <div class="category-header">
-                        <i class="fas fa-microchip"></i>
+                        <div class="category-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
                         <h3>Hardware & Embedded</h3>
                     </div>
                     <div class="skill-items">
-                        <div class="skill-item" data-skill="RISC-V">
-                            <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-microchip"></i>
                             <span>RISC-V</span>
                         </div>
-                        <div class="skill-item" data-skill="FPGA">
-                            <div class="skill-icon"><i class="fas fa-memory"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-memory"></i>
                             <span>FPGA</span>
                         </div>
-                        <div class="skill-item" data-skill="Vivado">
-                            <div class="skill-icon"><i class="fas fa-cog"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-cog"></i>
                             <span>Vivado</span>
                         </div>
-                        <div class="skill-item" data-skill="Verilator">
-                            <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
                             <span>Verilator</span>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
                     <div class="category-header">
-                        <i class="fas fa-brain"></i>
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
                         <h3>AI & Data</h3>
                     </div>
                     <div class="skill-items">
-                        <div class="skill-item" data-skill="PyTorch">
-                            <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i>
                             <span>PyTorch</span>
                         </div>
-                        <div class="skill-item" data-skill="TensorFlow">
-                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
                             <span>TensorFlow</span>
                         </div>
-                        <div class="skill-item" data-skill="Hugging Face">
-                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
                             <span>HuggingFace</span>
                         </div>
-                        <div class="skill-item" data-skill="Pandas">
-                            <div class="skill-icon"><i class="fas fa-table"></i></div>
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
                             <span>Pandas</span>
                         </div>
                     </div>
@@ -609,29 +684,32 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title center">
-                <span class="title-number">05.</span>
-                <span>Get In Touch</span>
+            <h2 class="section-title center" data-aos="fade-up">
+                <span class="title-number">06.</span>
+                <span class="title-text">Get In Touch</span>
             </h2>
-            <div class="contact-content">
+            
+            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
                 <p class="contact-text">
                     I'm currently looking for new opportunities. Whether you have a question, 
-                    want to collaborate, or just want to say hi, my inbox is always open!
+                    want to collaborate on a project, or just want to say hi, my inbox is always open!
                 </p>
+                
                 <a href="mailto:bharadhwajdace@gmail.com" class="btn btn-primary btn-large">
                     <i class="fas fa-paper-plane"></i>
                     <span>Say Hello</span>
                 </a>
+                
                 <div class="contact-social">
-                    <a href="https://github.com/narutoulumaki" target="_blank" class="social-link" aria-label="GitHub">
+                    <a href="https://github.com/narutoulumaki" target="_blank" class="contact-social-link" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy" target="_blank" class="contact-social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="mailto:bharadhwajdace@gmail.com" class="social-link" aria-label="Email">
+                    <a href="mailto:bharadhwajdace@gmail.com" class="contact-social-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -640,18 +718,20 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>Designed & Built by <span class="highlight">Bharadhwaj K</span></p>
-            <p class="footer-credit">Built with <i class="fas fa-heart"></i> using vanilla HTML, CSS & JS</p>
+            <p class="footer-sub">Built with <i class="fas fa-heart"></i> using vanilla HTML, CSS & JS</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
