@@ -5,88 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bharadhwaj K | Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow"></div>
+    
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
 
     <!-- Navigation -->
-    <nav>
+    <nav id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">BK<span class="dot">.</span></a>
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>BK<span class="logo-bracket">/&gt;</span>
+            </a>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://github.com/narutoulumaki" target="_blank" class="nav-icon"><i class="fab fa-github"></i></a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
+            <div class="nav-social">
+                <a href="https://github.com/narutoulumaki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero" id="home">
+    <section id="home" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <p class="greeting">Hello, I'm</p>
-                <h1 class="name">Bharadhwaj K</h1>
-                <h2 class="role">I am a <span class="typewriter"></span></h2>
-                <p class="bio">
-                    Research Intern at CHIPS, PES University. Passionate about 
-                    <span class="highlight">RISC-V Architecture</span>, 
-                    <span class="highlight">Hardware Verification</span>, and 
-                    <span class="highlight">Full-Stack Development</span>.
+                <p class="hero-subtitle animate-text">
+                    <span class="wave">👋</span> Hello, I'm
                 </p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">View Work</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                <h1 class="hero-title animate-text">
+                    <span class="gradient-text">Bharadhwaj K</span>
+                </h1>
+                <h2 class="hero-role animate-text">
+                    I build <span class="typewriter-wrapper"><span class="typewriter"></span><span class="cursor">|</span></span>
+                </h2>
+                <p class="hero-description animate-text">
+                    Research Intern at <span class="highlight">CHIPS, PES University</span>. 
+                    Passionate about building high-performance systems from 
+                    <span class="highlight">hardware</span> to <span class="highlight">web</span>.
+                </p>
+                <div class="hero-cta animate-text">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats animate-text">
+                    <div class="stat">
+                        <span class="stat-number" data-target="10">0</span>+
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="2">0</span>+
+                        <span class="stat-label">Years Exp</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5">0</span>+
+                        <span class="stat-label">Technologies</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <!-- Abstract Code/Tech Visual could go here -->
-                <div class="code-block">
-                    <pre><code class="language-python">class Engineer:
-    def __init__(self):
-        self.name = "Bharadhwaj"
-        self.passion = ["RISC-V", "Full-Stack"]
+                <div class="floating-card card-1">
+                    <i class="fas fa-microchip"></i>
+                    <span>RISC-V</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-code"></i>
+                    <span>Full-Stack</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-brain"></i>
+                    <span>AI/ML</span>
+                </div>
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">bharadhwaj.py</span>
+                    </div>
+                    <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">Engineer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.name = <span class="string">"Bharadhwaj"</span>
+        <span class="param">self</span>.skills = [
+            <span class="string">"RISC-V"</span>,
+            <span class="string">"Full-Stack"</span>,
+            <span class="string">"AI/ML"</span>
+        ]
     
-    def build(self):
-        return "Innovation"</code></pre>
+    <span class="keyword">def</span> <span class="function">create</span>(<span class="param">self</span>):
+        <span class="keyword">return</span> <span class="string">"Innovation"</span> <span class="blink">▌</span></code></pre>
                 </div>
             </div>
         </div>
-    </header>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am an Electronics and Communication Engineering student at PES University, Bangalore. 
-                        My journey bridges the gap between low-level hardware design and high-level software development.
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                <span>About Me</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm an <span class="highlight">Electronics and Communication Engineering</span> student 
+                        at PES University, Bangalore. My passion lies at the intersection of 
+                        <span class="highlight">hardware design</span> and <span class="highlight">software development</span>.
                     </p>
-                    <p>
-                        Currently, I am conducting research on RISC-V performance analysis and optimization. 
-                        I love building tools that make systems faster and more efficient.
+                    <p class="about-text">
+                        Currently, I'm conducting research on <span class="highlight">RISC-V performance analysis</span> 
+                        and optimization. I love building tools that make systems faster and more efficient.
                     </p>
-                    <div class="education-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <div>
-                            <h4>Bachelor of Technology in ECE</h4>
-                            <p>PES University (2022 - 2026)</p>
-                            <p class="cgpa">CGPA: 7.29/10.0</p>
+                    <p class="about-text">
+                        When I'm not coding, you'll find me exploring new technologies, 
+                        contributing to open-source, or diving deep into system architecture.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>B.Tech in ECE</h4>
+                                <p>PES University • 2022 - 2026</p>
+                                <span class="badge">CGPA: 7.29/10</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Bangalore, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div class="image-border"></div>
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
                         </div>
                     </div>
                 </div>
@@ -97,36 +183,48 @@
     <!-- Experience Section -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <!-- Item 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">May 2025 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Research Intern</h3>
-                        <h4>CHIPS, PES University</h4>
-                        <p>Conducting research on performance analysis and optimization for RISC-V systems. Developing cycle-accurate profiling tools using Python and C++.</p>
-                        <div class="tags">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                <span>Experience</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="experience-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="chips">CHIPS</button>
+                    <button class="tab-btn" data-tab="pesu">PES University</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-panel active" id="chips">
+                        <h3 class="job-title">Research Intern <span class="company">@ CHIPS, PES University</span></h3>
+                        <p class="job-duration"><i class="far fa-calendar-alt"></i> May 2025 - Present</p>
+                        <ul class="job-details">
+                            <li>Conducting research on performance analysis and optimization techniques for RISC-V systems</li>
+                            <li>Developing cycle-accurate profiling tools using Python and C++ for processor performance analysis</li>
+                            <li>Building automation scripts for data collection, preprocessing, and analysis pipelines</li>
+                            <li>Integrating profiler with InCore's Azurite core for testing and validation</li>
+                        </ul>
+                        <div class="job-tech">
                             <span>RISC-V</span>
                             <span>Python</span>
                             <span>C++</span>
-                            <span>Performance Analysis</span>
+                            <span>Verilator</span>
+                            <span>Linux</span>
                         </div>
                     </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Aug 2024 - Jan 2025</div>
-                    <div class="timeline-content">
-                        <h3>Teaching Assistant</h3>
-                        <h4>PES University</h4>
-                        <p>Technical TA for Standard Cell Design workshop (NXP Semiconductors). Guided 60+ participants through RTL-to-GDS flow and digital design concepts.</p>
-                        <div class="tags">
+                    <div class="tab-panel" id="pesu">
+                        <h3 class="job-title">Teaching Assistant <span class="company">@ PES University</span></h3>
+                        <p class="job-duration"><i class="far fa-calendar-alt"></i> Aug 2024 - Jan 2025</p>
+                        <ul class="job-details">
+                            <li>Technical TA for 5-day workshop on Standard Cell Design using SCL PDK 180nm (NXP Semiconductors)</li>
+                            <li>Guided 60+ participants through complete backend flow including custom layout and characterization</li>
+                            <li>Conducted workshops on RTL-to-GDS flow and digital design concepts</li>
+                            <li>Mentored students on technical projects and helped debug complex issues</li>
+                        </ul>
+                        <div class="job-tech">
                             <span>VLSI</span>
-                            <span>Teaching</span>
                             <span>Digital Design</span>
+                            <span>Cadence</span>
+                            <span>RTL</span>
                         </div>
                     </div>
                 </div>
@@ -137,164 +235,373 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                <span>Featured Projects</span>
+                <span class="title-line"></span>
+            </h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <i class="far fa-folder"></i>
-                        <div class="card-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- Project 1: Book Recommendations Microservices -->
+                <div class="project-card" data-project="book-recommendations">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">
+                                <i class="fas fa-expand"></i>
+                                <span>View Details</span>
+                            </button>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-book-reader"></i>
                         </div>
                     </div>
-                    <h3>Admissions CRM Core</h3>
-                    <p>Full-stack CRM module with Next.js 14 and Supabase. Features complex SQL schemas, RLS, Edge Functions, and real-time task dashboard.</p>
-                    <div class="card-tech">
-                        <span>Next.js</span>
-                        <span>Supabase</span>
-                        <span>TypeScript</span>
+                    <div class="project-info">
+                        <div class="project-top">
+                            <span class="project-label">Featured Project</span>
+                            <div class="project-links">
+                                <a href="https://github.com/narutoulumaki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Book Recommendations Microservices</h3>
+                        <p class="project-description">
+                            Microservices architecture for book recommendations with user authentication, 
+                            recommendation engine, and real-time notifications.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Docker</span>
+                            <span>Redis</span>
+                            <span>PostgreSQL</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <i class="far fa-folder"></i>
-                        <div class="card-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- Project 2: RISC-V Performance Profiler -->
+                <div class="project-card" data-project="riscv-profiler">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">
+                                <i class="fas fa-expand"></i>
+                                <span>View Details</span>
+                            </button>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-microchip"></i>
                         </div>
                     </div>
-                    <h3>RISC-V Performance Profiler</h3>
-                    <p>Profiling application for RISC-V instruction analysis. Python scripts for data conversion and automated report generation.</p>
-                    <div class="card-tech">
-                        <span>Python</span>
-                        <span>C++</span>
-                        <span>RISC-V</span>
+                    <div class="project-info">
+                        <div class="project-top">
+                            <span class="project-label">Featured Project</span>
+                            <div class="project-links">
+                                <a href="https://github.com/narutoulumaki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">RISC-V Performance Profiler</h3>
+                        <p class="project-description">
+                            Profiling application for RISC-V instruction analysis with automated report 
+                            generation and data visualization capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>RISC-V</span>
+                            <span>Spike</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <i class="far fa-folder"></i>
-                        <div class="card-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- Project 3: PD-YOLOv7 Research -->
+                <div class="project-card" data-project="yolov7">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">
+                                <i class="fas fa-expand"></i>
+                                <span>View Details</span>
+                            </button>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
                         </div>
                     </div>
-                    <h3>PD-YOLOv7 Research</h3>
-                    <p>Object detection compression using knowledge distillation-guided pruning for edge deployment. Optimized for NVIDIA Jetson.</p>
-                    <div class="card-tech">
-                        <span>PyTorch</span>
-                        <span>YOLOv7</span>
-                        <span>Edge AI</span>
+                    <div class="project-info">
+                        <div class="project-top">
+                            <span class="project-label">Research Project</span>
+                            <div class="project-links">
+                                <a href="https://github.com/narutoulumaki/PD-YOLOv7-Research" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">PD-YOLOv7 Research</h3>
+                        <p class="project-description">
+                            Object detection compression using knowledge distillation-guided pruning 
+                            for edge deployment on NVIDIA Jetson devices.
+                        </p>
+                        <div class="project-tech">
+                            <span>PyTorch</span>
+                            <span>YOLOv7</span>
+                            <span>ONNX</span>
+                            <span>Edge AI</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <i class="far fa-folder"></i>
-                        <div class="card-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- Project 4: Binance Trading Bot -->
+                <div class="project-card" data-project="binance-bot">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">
+                                <i class="fas fa-expand"></i>
+                                <span>View Details</span>
+                            </button>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
                     </div>
-                    <h3>Vedic Arithmetic Unit on FPGA</h3>
-                    <p>Embedded arithmetic processing unit on Zynq FPGA with hardware-software co-design using Vedic mathematics algorithms.</p>
-                    <div class="card-tech">
-                        <span>SystemVerilog</span>
-                        <span>FPGA</span>
-                        <span>Zynq</span>
+                    <div class="project-info">
+                        <div class="project-top">
+                            <span class="project-label">Featured Project</span>
+                            <div class="project-links">
+                                <a href="https://github.com/narutoulumaki/Binance-trading-bot" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Binance Futures Trading Bot</h3>
+                        <p class="project-description">
+                            Algorithmic trading bot for Binance Futures with order management, 
+                            real-time monitoring, and comprehensive logging system.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>AsyncIO</span>
+                            <span>REST APIs</span>
+                            <span>WebSocket</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <i class="far fa-folder"></i>
-                        <div class="card-links">
-                            <a href="https://github.com/Vaarun-Kamath/PES-IEEE-Conference-Site" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- Project 5: PES-IEEE Conference Site -->
+                <div class="project-card" data-project="ieee-site">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">
+                                <i class="fas fa-expand"></i>
+                                <span>View Details</span>
+                            </button>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
                         </div>
                     </div>
-                    <h3>PES-IEEE Conference Site</h3>
-                    <p>Full-stack conference website handling 500+ attendees. Built with Next.js and deployed for production.</p>
-                    <div class="card-tech">
-                        <span>Next.js</span>
-                        <span>React</span>
-                        <span>Tailwind</span>
+                    <div class="project-info">
+                        <div class="project-top">
+                            <span class="project-label">Web Development</span>
+                            <div class="project-links">
+                                <a href="https://github.com/Vaarun-Kamath/PES-IEEE-Conference-Site" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">PES-IEEE Conference Site</h3>
+                        <p class="project-description">
+                            Full-stack conference website handling 500+ attendees with dynamic navigation, 
+                            server-side rendering, and responsive design.
+                        </p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <div class="card-header">
-                        <i class="far fa-folder"></i>
-                        <div class="card-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- Project 6: Single Cycle RISC-V Processor -->
+                <div class="project-card" data-project="riscv-processor">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">
+                                <i class="fas fa-expand"></i>
+                                <span>View Details</span>
+                            </button>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-memory"></i>
                         </div>
                     </div>
-                    <h3>Single Cycle RISC-V Processor</h3>
-                    <p>Implemented complete single-cycle RISC-V processor supporting RV32I instruction set from scratch in SystemVerilog.</p>
-                    <div class="card-tech">
-                        <span>SystemVerilog</span>
-                        <span>Vivado</span>
-                        <span>Assembly</span>
+                    <div class="project-info">
+                        <div class="project-top">
+                            <span class="project-label">Hardware Design</span>
+                            <div class="project-links">
+                                <a href="https://github.com/narutoulumaki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Single Cycle RISC-V Processor</h3>
+                        <p class="project-description">
+                            Complete single-cycle RISC-V processor supporting RV32I instruction set 
+                            implemented from scratch in SystemVerilog.
+                        </p>
+                        <div class="project-tech">
+                            <span>SystemVerilog</span>
+                            <span>Vivado</span>
+                            <span>Assembly</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="more-projects">
-                <a href="https://github.com/narutoulumaki" target="_blank" class="btn btn-outline">View More on GitHub</a>
+            <div class="projects-cta">
+                <a href="https://github.com/narutoulumaki" target="_blank" class="btn btn-outline-large">
+                    <i class="fab fa-github"></i>
+                    <span>View All Projects on GitHub</span>
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon" id="modalIcon"></div>
+                <div class="modal-title-section">
+                    <span class="modal-label" id="modalLabel"></span>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-features">
+                    <h4>Key Features</h4>
+                    <ul id="modalFeatures"></ul>
+                </div>
+                <div class="modal-tech">
+                    <h4>Technologies Used</h4>
+                    <div class="tech-tags" id="modalTech"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" id="modalGithub" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>View on GitHub</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-wrapper">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                <span>Skills & Technologies</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>C++</span>
-                        <span>C</span>
-                        <span>JavaScript</span>
-                        <span>TypeScript</span>
-                        <span>SystemVerilog</span>
-                        <span>SQL</span>
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Python">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item" data-skill="C++">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript">
+                            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item" data-skill="TypeScript">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skill-item" data-skill="SystemVerilog">
+                            <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                            <span>SystemVerilog</span>
+                        </div>
+                        <div class="skill-item" data-skill="SQL">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>SQL</span>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Web Technologies</h3>
-                    <div class="skill-tags">
-                        <span>Next.js</span>
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>Tailwind CSS</span>
-                        <span>Supabase</span>
-                        <span>REST APIs</span>
+                    <div class="category-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Web Technologies</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="React">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item" data-skill="Next.js">
+                            <div class="skill-icon"><i class="fas fa-n"></i></div>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="skill-item" data-skill="Node.js">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item" data-skill="Tailwind">
+                            <div class="skill-icon"><i class="fas fa-wind"></i></div>
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="skill-item" data-skill="Supabase">
+                            <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                            <span>Supabase</span>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Hardware & Embedded</h3>
-                    <div class="skill-tags">
-                        <span>RISC-V</span>
-                        <span>FPGA</span>
-                        <span>Vivado</span>
-                        <span>Verilator</span>
-                        <span>Digital VLSI</span>
-                        <span>IoT</span>
+                    <div class="category-header">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Hardware & Embedded</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="RISC-V">
+                            <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                            <span>RISC-V</span>
+                        </div>
+                        <div class="skill-item" data-skill="FPGA">
+                            <div class="skill-icon"><i class="fas fa-memory"></i></div>
+                            <span>FPGA</span>
+                        </div>
+                        <div class="skill-item" data-skill="Vivado">
+                            <div class="skill-icon"><i class="fas fa-cog"></i></div>
+                            <span>Vivado</span>
+                        </div>
+                        <div class="skill-item" data-skill="Verilator">
+                            <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                            <span>Verilator</span>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>AI & Data</h3>
-                    <div class="skill-tags">
-                        <span>PyTorch</span>
-                        <span>TensorFlow</span>
-                        <span>Hugging Face</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                        <span>Matplotlib</span>
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI & Data</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="PyTorch">
+                            <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="skill-item" data-skill="TensorFlow">
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <span>TensorFlow</span>
+                        </div>
+                        <div class="skill-item" data-skill="Hugging Face">
+                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                            <span>HuggingFace</span>
+                        </div>
+                        <div class="skill-item" data-skill="Pandas">
+                            <div class="skill-icon"><i class="fas fa-table"></i></div>
+                            <span>Pandas</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -303,24 +610,47 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <div class="container contact-container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-            <a href="mailto:bharadhwajdace@gmail.com" class="btn btn-primary big-btn">Say Hello</a>
-            
-            <div class="social-links">
-                <a href="https://github.com/narutoulumaki" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:bharadhwajdace@gmail.com"><i class="fas fa-envelope"></i></a>
+        <div class="container">
+            <h2 class="section-title center">
+                <span class="title-number">05.</span>
+                <span>Get In Touch</span>
+            </h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm currently looking for new opportunities. Whether you have a question, 
+                    want to collaborate, or just want to say hi, my inbox is always open!
+                </p>
+                <a href="mailto:bharadhwajdace@gmail.com" class="btn btn-primary btn-large">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Say Hello</span>
+                </a>
+                <div class="contact-social">
+                    <a href="https://github.com/narutoulumaki" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:bharadhwajdace@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>Designed & Built by Bharadhwaj K</p>
+            <p>Designed & Built by <span class="highlight">Bharadhwaj K</span></p>
+            <p class="footer-credit">Built with <i class="fas fa-heart"></i> using vanilla HTML, CSS & JS</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="assets/js/script.js"></script>
 </body>
