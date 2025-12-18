@@ -35,41 +35,21 @@ function initPreloader() {
 }
 
 /* ========================================
-   Custom Cursor
+   Cursor Glow Effect
 ======================================== */
 function initCustomCursor() {
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorOutline = document.querySelector('.cursor-outline');
+    const cursorGlow = document.getElementById('cursor-glow');
     
-    if (!cursorDot || !cursorOutline) return;
+    if (!cursorGlow) return;
     
     // Check if device supports hover (not touch)
     if (window.matchMedia('(hover: hover)').matches) {
         document.addEventListener('mousemove', (e) => {
-            cursorDot.style.left = e.clientX + 'px';
-            cursorDot.style.top = e.clientY + 'px';
-            cursorOutline.style.left = e.clientX + 'px';
-            cursorOutline.style.top = e.clientY + 'px';
-        });
-        
-        // Add hover effect to interactive elements
-        const interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-item, .about-card');
-        
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursorDot.classList.add('hover');
-                cursorOutline.classList.add('hover');
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                cursorDot.classList.remove('hover');
-                cursorOutline.classList.remove('hover');
-            });
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
         });
     } else {
-        // Hide cursor on touch devices
-        cursorDot.style.display = 'none';
-        cursorOutline.style.display = 'none';
+        cursorGlow.style.display = 'none';
     }
 }
 

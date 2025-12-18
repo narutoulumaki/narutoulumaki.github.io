@@ -158,44 +158,23 @@ button {
 }
 
 /* ========================================
-   Custom Cursor
+   Cursor Glow Effect
 ======================================== */
-.cursor-dot {
+.cursor-glow {
     position: fixed;
-    width: 8px;
-    height: 8px;
-    background: var(--accent-primary);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.08) 30%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 1;
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease;
-}
-
-.cursor-outline {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--accent-primary);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: all 0.15s ease;
-    opacity: 0.5;
-}
-
-.cursor-dot.hover {
-    transform: translate(-50%, -50%) scale(2);
-}
-
-.cursor-outline.hover {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 0.2;
+    transition: opacity 0.3s ease;
+    mix-blend-mode: screen;
 }
 
 @media (max-width: 768px) {
-    .cursor-dot, .cursor-outline {
+    .cursor-glow {
         display: none;
     }
 }
@@ -373,15 +352,6 @@ button {
     transition: var(--transition);
     color: var(--text-secondary);
     position: relative;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.nav-number {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--accent-primary);
 }
 
 .nav-link:hover,
