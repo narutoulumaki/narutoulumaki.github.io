@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParticles();
     initCounters();
     initExperienceTabs();
+    initProjectModals();
     initBackToTop();
     initAOS();
 });
@@ -278,6 +279,181 @@ function initExperienceTabs() {
             }
         });
     });
+}
+
+/* ========================================
+   Project Modals
+======================================== */
+function initProjectModals() {
+    const projectCards = document.querySelectorAll('.project-card');
+    const modal = document.getElementById('project-modal');
+    const modalClose = document.getElementById('modal-close');
+    
+    if (!modal || projectCards.length === 0) return;
+    
+    // Project data
+    const projectsData = {
+        'book-recommendations': {
+            icon: 'fas fa-book-reader',
+            label: 'Featured Project',
+            title: 'Book Recommendations Microservices',
+            description: 'A scalable microservices architecture for personalized book recommendations. The system uses collaborative filtering and content-based algorithms to suggest books based on user preferences, reading history, and similar user profiles.',
+            features: [
+                'User authentication and profile management service',
+                'Recommendation engine using ML algorithms',
+                'Real-time notification system with WebSockets',
+                'Caching layer with Redis for fast responses',
+                'PostgreSQL database with optimized queries',
+                'Docker containerization for easy deployment'
+            ],
+            tech: ['Python', 'FastAPI', 'Docker', 'Redis', 'PostgreSQL', 'RabbitMQ'],
+            github: 'https://github.com/narutoulumaki'
+        },
+        'riscv-profiler': {
+            icon: 'fas fa-microchip',
+            label: 'Research Project',
+            title: 'RISC-V Performance Profiler',
+            description: 'A comprehensive profiling tool for RISC-V instruction analysis developed at CHIPS Lab, PES University. The tool provides cycle-accurate analysis and automated report generation for processor performance optimization.',
+            features: [
+                'Cycle-accurate instruction profiling',
+                'Integration with Spike RISC-V simulator',
+                'Automated data collection and preprocessing',
+                'Visualization dashboards for performance metrics',
+                'Support for RV32I and RV64I instruction sets',
+                'Integration with InCore Azurite core'
+            ],
+            tech: ['Python', 'C++', 'RISC-V', 'Spike', 'Verilator', 'Matplotlib'],
+            github: 'https://github.com/narutoulumaki'
+        },
+        'pd-yolov7': {
+            icon: 'fas fa-robot',
+            label: 'AI/ML Research',
+            title: 'PD-YOLOv7 Research',
+            description: 'Research project on model compression using knowledge distillation-guided pruning for YOLOv7 object detection. Optimized for edge deployment on NVIDIA Jetson devices while maintaining detection accuracy.',
+            features: [
+                'Knowledge distillation from teacher to student model',
+                'Structured pruning for model compression',
+                'ONNX export for edge deployment',
+                'Benchmarking on NVIDIA Jetson Nano/Xavier',
+                'Custom training pipeline with PyTorch',
+                '40% model size reduction with <2% accuracy drop'
+            ],
+            tech: ['PyTorch', 'YOLOv7', 'ONNX', 'TensorRT', 'CUDA', 'Edge AI'],
+            github: 'https://github.com/narutoulumaki/PD-YOLOv7-Research'
+        },
+        'binance-bot': {
+            icon: 'fas fa-chart-line',
+            label: 'FinTech',
+            title: 'Binance Futures Trading Bot',
+            description: 'An algorithmic trading bot for Binance Futures market with automated order management, real-time market monitoring, and risk management features. Built with async Python for high-performance execution.',
+            features: [
+                'Real-time market data via WebSocket streams',
+                'Automated order placement and management',
+                'Risk management with stop-loss and take-profit',
+                'Position sizing based on account balance',
+                'Comprehensive logging and trade history',
+                'Backtesting module for strategy validation'
+            ],
+            tech: ['Python', 'AsyncIO', 'REST APIs', 'WebSocket', 'Pandas', 'SQLite'],
+            github: 'https://github.com/narutoulumaki/Binance-trading-bot'
+        },
+        'ieee-conference': {
+            icon: 'fas fa-globe',
+            label: 'Web Development',
+            title: 'PES-IEEE Conference Site',
+            description: 'Full-stack conference management website built for PES IEEE student branch. Handled 500+ attendee registrations with dynamic content management, server-side rendering, and responsive design.',
+            features: [
+                'Server-side rendering with Next.js',
+                'Dynamic navigation and content sections',
+                'Registration form with validation',
+                'Admin dashboard for content management',
+                'Responsive design for all devices',
+                'SEO optimized with meta tags'
+            ],
+            tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+            github: 'https://github.com/Vaarun-Kamath/PES-IEEE-Conference-Site'
+        },
+        'riscv-processor': {
+            icon: 'fas fa-memory',
+            label: 'Hardware Design',
+            title: 'Single Cycle RISC-V Processor',
+            description: 'A complete single-cycle RISC-V processor implementation supporting the RV32I base instruction set. Designed from scratch in SystemVerilog with full simulation and FPGA synthesis support.',
+            features: [
+                'Full RV32I instruction set support',
+                'ALU with all arithmetic and logic operations',
+                'Register file with 32 general-purpose registers',
+                'Instruction and data memory modules',
+                'Control unit with proper signal generation',
+                'Testbench with assembly program verification'
+            ],
+            tech: ['SystemVerilog', 'Vivado', 'RISC-V Assembly', 'GTKWave', 'Verilator'],
+            github: 'https://github.com/narutoulumaki'
+        }
+    };
+    
+    // Open modal on card click
+    projectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            const projectId = card.getAttribute('data-project');
+            const project = projectsData[projectId];
+            
+            if (project) {
+                openModal(project);
+            }
+        });
+        
+        // Add pointer cursor
+        card.style.cursor = 'pointer';
+    });
+    
+    // Close modal
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    function openModal(project) {
+        // Set modal content
+        document.getElementById('modal-icon').innerHTML = `<i class="${project.icon}"></i>`;
+        document.getElementById('modal-label').textContent = project.label;
+        document.getElementById('modal-title').textContent = project.title;
+        document.getElementById('modal-description').textContent = project.description;
+        
+        // Set features
+        const featuresList = document.getElementById('modal-features-list');
+        featuresList.innerHTML = project.features.map(f => `<li>${f}</li>`).join('');
+        
+        // Set tech
+        const techContainer = document.getElementById('modal-tech');
+        techContainer.innerHTML = project.tech.map(t => `<span>${t}</span>`).join('');
+        
+        // Set links
+        const linksContainer = document.getElementById('modal-links');
+        linksContainer.innerHTML = `
+            <a href="${project.github}" target="_blank" class="btn-github">
+                <i class="fab fa-github"></i>
+                View on GitHub
+            </a>
+        `;
+        
+        // Show modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 }
 
 /* ========================================
