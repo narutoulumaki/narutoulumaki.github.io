@@ -312,35 +312,35 @@ function initProjectModals() {
         },
         'riscv-profiler': {
             icon: 'fas fa-microchip',
-            label: 'Research Project',
-            title: 'RISC-V Performance Profiler',
-            description: 'A comprehensive profiling tool for RISC-V instruction analysis developed at CHIPS Lab, PES University. The tool provides cycle-accurate analysis and automated report generation for processor performance optimization.',
+            label: 'Research Project • IEEE HiPC 2025',
+            title: 'PARISCV: RISC-V Performance Profiler',
+            description: 'A comprehensive profiling tool for RISC-V instruction analysis developed at CHIPS Lab, PES University. Poster "PARISCV: A RISC-V Profiler for Application-Specific Hardware Optimization" presented at the 32nd IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC 2025) in Hyderabad, India.',
             features: [
+                'Poster presented at IEEE HiPC 2025, Hyderabad',
                 'Cycle-accurate instruction profiling',
                 'Integration with Spike RISC-V simulator',
                 'Automated data collection and preprocessing',
                 'Visualization dashboards for performance metrics',
-                'Support for RV32I and RV64I instruction sets',
                 'Integration with InCore Azurite core'
             ],
             tech: ['Python', 'C++', 'RISC-V', 'Spike', 'Verilator', 'Matplotlib'],
             github: 'https://github.com/narutoulumaki'
         },
-        'pd-yolov7': {
-            icon: 'fas fa-robot',
-            label: 'AI/ML Research',
-            title: 'PD-YOLOv7 Research',
-            description: 'Research project on model compression using knowledge distillation-guided pruning for YOLOv7 object detection. Optimized for edge deployment on NVIDIA Jetson devices while maintaining detection accuracy.',
+        'admissions-crm': {
+            icon: 'fas fa-users-cog',
+            label: 'Full-Stack Application',
+            title: 'Admissions CRM System',
+            description: 'A complete Customer Relationship Management system designed for educational institutions to streamline the student admissions process. Features lead management, applicant tracking, analytics, and automated communication workflows.',
             features: [
-                'Knowledge distillation from teacher to student model',
-                'Structured pruning for model compression',
-                'ONNX export for edge deployment',
-                'Benchmarking on NVIDIA Jetson Nano/Xavier',
-                'Custom training pipeline with PyTorch',
-                '40% model size reduction with <2% accuracy drop'
+                'Lead tracking and management dashboard',
+                'Applicant pipeline with status tracking',
+                'Analytics and reporting with visualizations',
+                'Automated email and notification workflows',
+                'Role-based access control for staff',
+                'Real-time updates with Supabase'
             ],
-            tech: ['PyTorch', 'YOLOv7', 'ONNX', 'TensorRT', 'CUDA', 'Edge AI'],
-            github: 'https://github.com/narutoulumaki/PD-YOLOv7-Research'
+            tech: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'PostgreSQL', 'Vercel'],
+            github: 'https://github.com/narutoulumaki'
         },
         'binance-bot': {
             icon: 'fas fa-chart-line',
