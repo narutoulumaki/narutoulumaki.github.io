@@ -129,13 +129,12 @@ function initTypingEffect() {
     if (!typingElement) return;
     
     const phrases = [
-        'RISC-V processors',
-        'full-stack apps',
-        'AI/ML pipelines',
-        'digital circuits',
-        'microservices',
-        'embedded systems',
-        'scalable backends'
+        'backend systems',
+        'distributed applications',
+        'real-time platforms',
+        'RISC-V tooling',
+        'REST APIs',
+        'scalable services'
     ];
     
     let phraseIndex = 0;

@@ -97,10 +97,11 @@
                     I build <span class="typing-text" id="typing-text"></span><span class="typing-cursor">|</span>
                 </h2>
                 <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
-                    Research Intern at <span class="highlight">CHIPS, PES University</span>. 
-                    Building at the intersection of <span class="highlight">Hardware & Software</span> — 
-                    from <span class="highlight">RISC-V processors</span> to 
-                    <span class="highlight">scalable web applications</span>.
+                    Backend Developer building <span class="highlight">scalable systems</span> and 
+                    <span class="highlight">real-time applications</span>. Experienced with 
+                    <span class="highlight">distributed architectures</span>, 
+                    <span class="highlight">REST APIs</span>, and 
+                    <span class="highlight">RISC-V tooling</span>.
                 </p>
                 <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
                     <a href="#projects" class="btn btn-primary">
@@ -138,11 +139,11 @@
                         </div>
                     </div>
                     <div class="floating-icons">
-                        <div class="float-icon icon-1"><i class="fab fa-python"></i></div>
-                        <div class="float-icon icon-2"><i class="fas fa-microchip"></i></div>
-                        <div class="float-icon icon-3"><i class="fab fa-react"></i></div>
-                        <div class="float-icon icon-4"><i class="fas fa-brain"></i></div>
-                        <div class="float-icon icon-5"><i class="fab fa-js"></i></div>
+                        <div class="float-icon icon-1"><i class="fab fa-node-js"></i></div>
+                        <div class="float-icon icon-2"><i class="fas fa-database"></i></div>
+                        <div class="float-icon icon-3"><i class="fab fa-python"></i></div>
+                        <div class="float-icon icon-4"><i class="fas fa-microchip"></i></div>
+                        <div class="float-icon icon-5"><i class="fas fa-server"></i></div>
                     </div>
                 </div>
                 <div class="code-card">
@@ -157,14 +158,14 @@
                     <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-class">Engineer</span>:
     <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
         <span class="code-param">self</span>.name = <span class="code-string">"Bharadhwaj"</span>
-        <span class="code-param">self</span>.role = <span class="code-string">"ECE + Software"</span>
-        <span class="code-param">self</span>.hardware = [
-            <span class="code-string">"RISC-V"</span>,
-            <span class="code-string">"RTL"</span>
+        <span class="code-param">self</span>.role = <span class="code-string">"Backend Engineer"</span>
+        <span class="code-param">self</span>.backend = [
+            <span class="code-string">"Node.js"</span>,
+            <span class="code-string">"Rails"</span>
         ]
-        <span class="code-param">self</span>.software = [
-            <span class="code-string">"Full-Stack"</span>,
-            <span class="code-string">"AI/ML"</span>
+        <span class="code-param">self</span>.systems = [
+            <span class="code-string">"RISC-V"</span>,
+            <span class="code-string">"Distributed"</span>
         ]</code></pre>
                 </div>
             </div>
@@ -190,18 +191,19 @@
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right">
                     <p>
-                        I'm an <span class="highlight">Electronics and Communication Engineering</span> student 
-                        at PES University with strong foundations in both <span class="highlight">computer architecture</span> 
-                        and <span class="highlight">software engineering</span>.
+                        I'm a <span class="highlight">Backend Developer</span> and 
+                        <span class="highlight">Electronics Engineering</span> student 
+                        at PES University with strong foundations in <span class="highlight">systems architecture</span> 
+                        and <span class="highlight">distributed systems</span>.
                     </p>
                     <p>
-                        Currently researching <span class="highlight">RISC-V performance optimization</span> at CHIPS Lab, 
-                        while also building <span class="highlight">full-stack applications</span> and 
-                        <span class="highlight">AI/ML pipelines</span>. I bridge the gap between hardware and software.
+                        Currently building <span class="highlight">production backend systems</span> with Ruby on Rails, 
+                        while also developing <span class="highlight">RISC-V performance tools</span> at CHIPS Lab. 
+                        I work across the full systems stack.
                     </p>
                     <p>
-                        Whether it's writing RTL for processors or deploying microservices, 
-                        I enjoy solving complex problems across the entire computing stack.
+                        Whether it's designing REST APIs, implementing real-time WebSocket systems, 
+                        or building processor profiling tools, I enjoy engineering robust backend solutions.
                     </p>
                     
                     <div class="about-cards">
@@ -213,7 +215,7 @@
                                 <h4>Education</h4>
                                 <p>B.Tech in ECE</p>
                                 <span class="card-meta">PES University • 2022-2026</span>
-                                <span class="badge">CGPA: 7.29/10</span>
+                                <span class="badge">CGPA: 7.45/10</span>
                             </div>
                         </div>
                         <div class="about-card" data-aos="fade-up" data-aos-delay="200">
@@ -254,7 +256,11 @@
             
             <div class="experience-content" data-aos="fade-up" data-aos-delay="100">
                 <div class="exp-tabs">
-                    <button class="exp-tab active" data-tab="chips">
+                    <button class="exp-tab active" data-tab="commutatus">
+                        <span class="tab-indicator"></span>
+                        Commutatus
+                    </button>
+                    <button class="exp-tab" data-tab="chips">
                         <span class="tab-indicator"></span>
                         CHIPS Lab
                     </button>
@@ -265,36 +271,74 @@
                 </div>
                 
                 <div class="exp-panels">
-                    <div class="exp-panel active" id="panel-chips">
+                    <div class="exp-panel active" id="panel-commutatus">
                         <h3 class="exp-title">
-                            Research Intern <span class="exp-company">@ CHIPS, PES University</span>
+                            Backend Developer Intern <span class="exp-company">@ Commutatus</span>
                         </h3>
                         <p class="exp-date">
                             <i class="far fa-calendar-alt"></i>
-                            May 2025 — Present
+                            Backend Engineering
                         </p>
                         <ul class="exp-list">
                             <li>
                                 <i class="fas fa-chevron-right"></i>
-                                Conducting research on performance analysis and optimization techniques for RISC-V systems
+                                Building and maintaining REST APIs using Ruby on Rails for production applications
                             </li>
                             <li>
                                 <i class="fas fa-chevron-right"></i>
-                                Developing cycle-accurate profiling tools using Python and C++ for processor performance analysis
+                                Working with relational databases using PostgreSQL and ActiveRecord ORM
                             </li>
                             <li>
                                 <i class="fas fa-chevron-right"></i>
-                                Building automation scripts for data collection, preprocessing, and analysis pipelines
+                                Implementing authentication and authorization logic for secure API endpoints
                             </li>
                             <li>
                                 <i class="fas fa-chevron-right"></i>
-                                Integrating profiler with InCore's Azurite core for testing and validation
+                                Debugging routing, API behavior, and backend logic issues in production codebase
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Contributing to production backend codebase using Git workflows and MVC architecture
                             </li>
                         </ul>
                         <div class="exp-tech">
-                            <span>RISC-V</span>
+                            <span>Ruby on Rails</span>
+                            <span>PostgreSQL</span>
+                            <span>REST APIs</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                    
+                    <div class="exp-panel" id="panel-chips">
+                        <h3 class="exp-title">
+                            Research Intern <span class="exp-company">@ CHIPS Lab, PES University</span>
+                        </h3>
+                        <p class="exp-date">
+                            <i class="far fa-calendar-alt"></i>
+                            RISC-V Performance Tooling
+                        </p>
+                        <ul class="exp-list">
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Developing RISC-V instruction trace analysis tools for processor performance profiling
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Building Python pipelines for automated performance analysis and reporting
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Working with Spike and Verilator for RISC-V simulation and validation
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Automating trace parsing workflows and integrating with Azurite RISC-V core
+                            </li>
+                        </ul>
+                        <div class="exp-tech">
                             <span>Python</span>
                             <span>C++</span>
+                            <span>RISC-V</span>
                             <span>Verilator</span>
                             <span>Linux</span>
                         </div>
@@ -306,30 +350,25 @@
                         </h3>
                         <p class="exp-date">
                             <i class="far fa-calendar-alt"></i>
-                            Aug 2024 — Jan 2025
+                            Chips-to-Startup (C2S) Program with NXP
                         </p>
                         <ul class="exp-list">
                             <li>
                                 <i class="fas fa-chevron-right"></i>
-                                Technical TA for 5-day workshop on Standard Cell Design using SCL PDK 180nm (NXP Semiconductors)
+                                Assisted in teaching Standard Cell Design using SCL 180nm PDK
                             </li>
                             <li>
                                 <i class="fas fa-chevron-right"></i>
-                                Guided 60+ participants through complete backend flow including custom layout and characterization
+                                Guided students through digital design concepts and RTL workflows
                             </li>
                             <li>
                                 <i class="fas fa-chevron-right"></i>
-                                Conducted workshops on RTL-to-GDS flow and digital design concepts
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Mentored students on technical projects and helped debug complex issues
+                                Supported lab sessions and debugging of design assignments
                             </li>
                         </ul>
                         <div class="exp-tech">
                             <span>VLSI</span>
                             <span>Digital Design</span>
-                            <span>Cadence</span>
                             <span>RTL</span>
                         </div>
                     </div>
@@ -348,134 +387,133 @@
             </h2>
             
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-project="book-recommendations">
+                <!-- Project 1: Live Polling System -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-project="live-polling">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop" alt="Book Recommendations" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Live Polling System" class="project-img">
                         <div class="project-image-overlay"></div>
                     </div>
                     <div class="project-content">
-                        <span class="project-label">Featured Project</span>
-                        <h3 class="project-title">Book Recommendations Microservices</h3>
+                        <span class="project-label">Backend System</span>
+                        <h3 class="project-title">Live Polling System</h3>
                         <p class="project-description">
-                            Microservices architecture for book recommendations with user authentication, 
-                            recommendation engine, and real-time notifications.
+                            Real-time backend system for classroom polling using WebSockets with 
+                            server-authoritative timers and database constraints for vote integrity.
                         </p>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>Docker</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>WebSockets</span>
+                            <span>PostgreSQL</span>
+                            <span>Prisma</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Onebox Email Scheduler -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-project="email-scheduler">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&h=400&fit=crop" alt="Email Scheduler" class="project-img">
+                        <div class="project-image-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Backend System</span>
+                        <h3 class="project-title">Onebox Email Scheduler</h3>
+                        <p class="project-description">
+                            Backend system for scheduled email delivery using Redis job queues,
+                            delayed background processing, and restart-safe job recovery.
+                        </p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>Express</span>
                             <span>Redis</span>
+                            <span>BullMQ</span>
                             <span>PostgreSQL</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-project="riscv-profiler">
+                <!-- Project 3: Book Recommendation Microservice -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-project="book-recommendations">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="RISC-V Profiler" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop" alt="Book Recommendations" class="project-img">
                         <div class="project-image-overlay"></div>
                     </div>
                     <div class="project-content">
-                        <span class="project-label">Research Project • IEEE HiPC 2025</span>
-                        <h3 class="project-title">PARISCV: RISC-V Performance Profiler</h3>
+                        <span class="project-label">Microservice</span>
+                        <h3 class="project-title">Book Recommendation Microservice</h3>
                         <p class="project-description">
-                            Profiling application for RISC-V instruction analysis. Poster presented at 
-                            IEEE HiPC 2025, Hyderabad.
+                            Backend microservice implementing recommendation logic with REST API architecture, 
+                            relational schema design, and JWT authentication.
                         </p>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>C++</span>
-                            <span>RISC-V</span>
-                            <span>Spike</span>
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>PostgreSQL</span>
+                            <span>JWT</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 3 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-project="admissions-crm">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Admissions CRM" class="project-img">
-                        <div class="project-image-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Full-Stack Application</span>
-                        <h3 class="project-title">Admissions CRM System</h3>
-                        <p class="project-description">
-                            Complete CRM solution for managing student admissions with lead tracking,
-                            analytics dashboard, and automated workflows.
-                        </p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>TypeScript</span>
-                            <span>Supabase</span>
-                            <span>Tailwind</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
+                <!-- Project 4: Binance Futures Trading Bot -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-project="binance-bot">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" alt="Trading Bot" class="project-img">
                         <div class="project-image-overlay"></div>
                     </div>
                     <div class="project-content">
-                        <span class="project-label">FinTech</span>
+                        <span class="project-label">Systems Engineering</span>
                         <h3 class="project-title">Binance Futures Trading Bot</h3>
                         <p class="project-description">
-                            Algorithmic trading bot for Binance Futures with order management, 
-                            real-time monitoring, and comprehensive logging system.
+                            Automated trading system with asynchronous API interaction, 
+                            order lifecycle management, and comprehensive error handling.
                         </p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>AsyncIO</span>
                             <span>REST APIs</span>
-                            <span>WebSocket</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 5 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-project="ieee-conference">
+                <!-- Project 5: RISC-V Performance Profiler -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-project="riscv-profiler">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Web Development" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="RISC-V Profiler" class="project-img">
                         <div class="project-image-overlay"></div>
                     </div>
                     <div class="project-content">
-                        <span class="project-label">Web Development</span>
-                        <h3 class="project-title">PES-IEEE Conference Site</h3>
+                        <span class="project-label">Systems Tooling</span>
+                        <h3 class="project-title">RISC-V Performance Profiler</h3>
                         <p class="project-description">
-                            Full-stack conference website handling 500+ attendees with dynamic navigation, 
-                            server-side rendering, and responsive design.
+                            Instruction trace analysis tool for studying processor performance 
+                            using Spike and Verilator simulation.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>RISC-V</span>
+                            <span>Verilator</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Conference Management Platform -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-project="ieee-conference">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Conference Site" class="project-img">
+                        <div class="project-image-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Full-Stack Application</span>
+                        <h3 class="project-title">Conference Management Platform</h3>
+                        <p class="project-description">
+                            Full-stack conference website for PES IEEE with backend API integration 
+                            and event workflow logic.
                         </p>
                         <div class="project-tech">
                             <span>Next.js</span>
-                            <span>React</span>
                             <span>TypeScript</span>
-                            <span>Tailwind</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-project="riscv-processor">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Hardware Design" class="project-img">
-                        <div class="project-image-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Hardware Design</span>
-                        <h3 class="project-title">Single Cycle RISC-V Processor</h3>
-                        <p class="project-description">
-                            Complete single-cycle RISC-V processor supporting RV32I instruction set 
-                            implemented from scratch in SystemVerilog.
-                        </p>
-                        <div class="project-tech">
-                            <span>SystemVerilog</span>
-                            <span>Vivado</span>
-                            <span>Assembly</span>
                         </div>
                     </div>
                 </div>
@@ -513,8 +551,12 @@
                             <span>Python</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>C++</span>
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-gem"></i>
+                            <span>Ruby</span>
                         </div>
                         <div class="skill-item">
                             <i class="fab fa-js-square"></i>
@@ -522,11 +564,7 @@
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-code"></i>
-                            <span>TypeScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-microchip"></i>
-                            <span>SystemVerilog</span>
+                            <span>C++</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-database"></i>
@@ -538,30 +576,34 @@
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                     <div class="category-header">
                         <div class="category-icon">
-                            <i class="fas fa-globe"></i>
+                            <i class="fas fa-server"></i>
                         </div>
-                        <h3>Web Technologies</h3>
+                        <h3>Backend</h3>
                     </div>
                     <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-n"></i>
-                            <span>Next.js</span>
-                        </div>
                         <div class="skill-item">
                             <i class="fab fa-node-js"></i>
                             <span>Node.js</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-wind"></i>
-                            <span>Tailwind</span>
+                            <i class="fas fa-server"></i>
+                            <span>Express</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-gem"></i>
+                            <span>Ruby on Rails</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-plug"></i>
+                            <span>REST APIs</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-bolt"></i>
-                            <span>Supabase</span>
+                            <span>WebSockets</span>
                         </div>
                     </div>
                 </div>
@@ -569,26 +611,22 @@
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                     <div class="category-header">
                         <div class="category-icon">
-                            <i class="fas fa-microchip"></i>
+                            <i class="fas fa-database"></i>
                         </div>
-                        <h3>Hardware & Embedded</h3>
+                        <h3>Databases</h3>
                     </div>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="fas fa-microchip"></i>
-                            <span>RISC-V</span>
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-memory"></i>
-                            <span>FPGA</span>
+                            <span>Redis</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-cog"></i>
-                            <span>Vivado</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-terminal"></i>
-                            <span>Verilator</span>
+                            <i class="fas fa-layer-group"></i>
+                            <span>Prisma ORM</span>
                         </div>
                     </div>
                 </div>
@@ -596,26 +634,53 @@
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
                     <div class="category-header">
                         <div class="category-icon">
-                            <i class="fas fa-brain"></i>
+                            <i class="fas fa-cogs"></i>
                         </div>
-                        <h3>AI & Data</h3>
+                        <h3>Systems Concepts</h3>
                     </div>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="fas fa-fire"></i>
-                            <span>PyTorch</span>
+                            <i class="fas fa-lock"></i>
+                            <span>Auth</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-brain"></i>
-                            <span>TensorFlow</span>
+                            <i class="fas fa-tasks"></i>
+                            <span>Background Jobs</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-robot"></i>
-                            <span>HuggingFace</span>
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Rate Limiting</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-table"></i>
-                            <span>Pandas</span>
+                            <i class="fas fa-broadcast-tower"></i>
+                            <span>Event-driven</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Postman</span>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@
       "degree": "Bachelor of Technology in Electronics and Communication Engineering",
       "location": "Bangalore, India",
       "graduation_date": "June 2026",
-      "cgpa": "7.29/10.0",
+      "cgpa": "7.45/10.0",
       "relevant_coursework": [
         "Machine Learning Applications",
         "Deep Learning Fundamentals",
@@ -37,21 +37,36 @@
   
   "experience": [
     {
+      "id": "exp0",
+      "company": "Commutatus",
+      "position": "Backend Developer Intern",
+      "location": "Remote",
+      "start_date": "Present",
+      "end_date": "Present",
+      "achievements": [
+        "Building and maintaining REST APIs using Ruby on Rails for production applications",
+        "Working with relational databases using PostgreSQL and ActiveRecord ORM",
+        "Implementing authentication and authorization logic for secure API endpoints",
+        "Debugging routing, API behavior, and backend logic issues in production codebase",
+        "Contributing to production backend codebase using Git workflows and MVC architecture",
+        "Understanding MVC architecture, controllers, services, and database models"
+      ],
+      "keywords": ["backend", "ruby", "rails", "postgresql", "REST", "API", "authentication", "authorization", "git", "MVC", "ActiveRecord"]
+    },
+    {
       "id": "exp1",
-      "company": "CHIPS, PES University",
+      "company": "CHIPS Lab, PES University",
       "position": "Research Intern",
       "location": "Bangalore, India",
       "start_date": "May 2025",
       "end_date": "Present",
       "achievements": [
-        "Conducting research on performance analysis and optimization techniques for RISC-V systems, working in collaborative research-driven environment",
-        "Developing cycle-accurate profiling tool using Python and C++, analyzing processor performance and system-level behavior",
-        "Building Python automation scripts for data collection, preprocessing, and automated analysis pipelines for large datasets",
-        "Integrating profiler with InCore's Azurite core, performing testing and validation to ensure accurate performance metrics",
-        "Implementing data visualization for performance analysis using matplotlib and working with distributed computing concepts",
-        "Collaborating with research team to debug low-level hardware-software integration issues and optimize performance bottlenecks"
+        "Developing RISC-V instruction trace analysis tools for processor performance profiling",
+        "Building Python pipelines for automated performance analysis and reporting",
+        "Working with Spike and Verilator for RISC-V simulation and validation",
+        "Automating trace parsing workflows and integrating with Azurite RISC-V core"
       ],
-      "keywords": ["research", "python", "c++", "performance", "analysis", "optimization", "RISC-V", "embedded systems", "profiling", "data analysis", "automation", "hardware", "software", "testing", "debugging", "linux"]
+      "keywords": ["research", "python", "c++", "performance", "analysis", "RISC-V", "profiling", "Verilator", "Spike", "linux"]
     },
     {
       "id": "exp2",
@@ -61,208 +76,121 @@
       "start_date": "Aug 2024",
       "end_date": "Jan 2025",
       "achievements": [
-        "Technical Teaching Assistant for 5-day IEP on Standard Cell Design using SCL PDK 180nm under Government of India's C2S Programme with NXP Semiconductors",
-        "Guided 60+ participants through complete backend flow including custom layout, characterization of inverters/NAND gates, and full adder synthesis using self-characterized library",
-        "Conducted technical workshops and lab sessions for 60+ students on RTL-to-GDS flow and digital design concepts for Computer-Aided Digital Systems course",
-        "Facilitated technical workshops demonstrating ability to communicate complex concepts effectively and mentor students on technical projects",
-        "Helped students debug code, understand concepts, and complete projects, developing strong communication and problem-solving skills"
+        "Assisted in teaching Standard Cell Design using SCL 180nm PDK under Government of India's C2S Programme with NXP Semiconductors",
+        "Guided students through digital design concepts and RTL workflows",
+        "Supported lab sessions and debugging of design assignments"
       ],
-      "keywords": ["teaching", "TA", "mentor", "workshop", "training", "communication", "VLSI", "digital design", "RTL", "NXP", "semiconductors", "IC design", "leadership", "student", "education"]
+      "keywords": ["teaching", "TA", "mentor", "VLSI", "digital design", "RTL", "NXP", "semiconductors"]
     }
   ],
   
   "projects": [
     {
       "id": "proj1",
-      "name": "Cross-Lingual News Classification using Transformer Models",
-      "technologies": ["Python", "PyTorch", "BERT", "Hugging Face Transformers", "NLP"],
+      "name": "Live Polling System",
+      "technologies": ["Node.js", "Express", "WebSockets", "PostgreSQL", "Prisma"],
       "date": "2024",
       "github": "",
       "description": [
-        "Implemented multilingual NLP system using transformer architectures (mBERT, XLM-R) for cross-lingual news categorization across 4+ languages, demonstrating understanding of Large Language Models and transfer learning",
-        "Built complete ML pipeline: data collection via APIs and web scraping, text preprocessing with Hugging Face tokenizers (WordPiece tokenization), model fine-tuning with PyTorch, and comprehensive evaluation using accuracy, precision, recall, and F1-score metrics",
-        "Implemented domain adaptation techniques and data visualization for model performance analysis using matplotlib and Seaborn",
-        "Explored prompt engineering concepts and worked with pre-trained language models, gaining foundational understanding of LLM applications"
+        "Real-time backend system for classroom polling using WebSockets",
+        "Implemented server-authoritative timers for synchronized poll sessions",
+        "Designed database constraints for vote integrity and session management",
+        "Built reconnection handling for seamless user experience"
       ],
-      "keywords": ["machine learning", "ML", "AI", "NLP", "natural language processing", "deep learning", "python", "pytorch", "BERT", "transformers", "LLM", "large language models", "hugging face", "data science", "classification", "multilingual", "cross-lingual"]
+      "keywords": ["backend", "real-time", "websockets", "node.js", "express", "postgresql", "prisma", "polling", "server"]
     },
     {
       "id": "proj2",
-      "name": "PES-IEEE-ETCC Conference Website",
-      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      "name": "Onebox Email Scheduler",
+      "technologies": ["Node.js", "Express", "Redis", "BullMQ", "PostgreSQL"],
       "date": "2024",
-      "github": "https://github.com/Vaarun-Kamath/PES-IEEE-Conference-Site",
+      "github": "",
       "description": [
-        "Developed full-stack conference website with dynamic navigation, mobile-responsive design, and server-side rendering for optimized performance",
-        "Leveraged Next.js for server-side rendering implementing features based on user requirements, handling frontend and backend integration for conference management system",
-        "Built RESTful APIs for data management, integrated frontend with backend services, and deployed application for production use handling 500+ conference attendees",
-        "Collaborated with design team to translate requirements into functional features with responsive UI/UX"
+        "Backend system for scheduled email delivery using Redis job queues",
+        "Implemented delayed background processing with BullMQ",
+        "Built rate limiting for email delivery management",
+        "Designed restart-safe job recovery mechanisms"
       ],
-      "keywords": ["web development", "full-stack", "frontend", "backend", "next.js", "react", "typescript", "javascript", "tailwind", "CSS", "responsive design", "API", "REST", "server-side rendering", "SSR"]
+      "keywords": ["backend", "redis", "queue", "bullmq", "node.js", "express", "email", "scheduling", "background jobs"]
     },
     {
       "id": "proj3",
-      "name": "RISC-V Performance Profiler",
-      "technologies": ["Python", "C++", "Spike", "Verilator", "Git"],
-      "date": "2025",
+      "name": "Book Recommendation Microservice",
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "JWT"],
+      "date": "2024",
       "github": "",
       "description": [
-        "Developing profiling application for RISC-V instruction analysis and performance monitoring, implementing unit testing and integration testing for accuracy",
-        "Created Python scripts for data conversion, parsing, and automated report generation with visualization, debugging system-level issues in toolchain compatibility",
-        "Built command-line interface, implemented efficient file parsing logic using C++ data structures, and created analytical reports for performance metrics",
-        "Used Git for version control and collaborative development, following software development best practices and SDLC methodologies"
+        "Backend microservice implementing recommendation logic",
+        "Designed REST API architecture with proper endpoint structure",
+        "Implemented relational schema design for books and user preferences",
+        "Built JWT authentication and API validation"
       ],
-      "keywords": ["RISC-V", "profiling", "performance", "analysis", "python", "c++", "embedded systems", "systems programming", "debugging", "testing", "automation", "CLI", "data analysis", "git", "linux", "toolchain"]
+      "keywords": ["backend", "java", "spring boot", "microservice", "REST", "API", "postgresql", "jwt", "authentication"]
     },
     {
       "id": "proj4",
-      "name": "Vedic Arithmetic Unit on FPGA",
-      "technologies": ["SystemVerilog", "Python", "PYNQ-Z2", "Vivado", "C"],
+      "name": "Binance Futures Trading Bot",
+      "technologies": ["Python", "AsyncIO", "REST APIs"],
       "date": "2024",
       "github": "",
       "description": [
-        "Designing embedded arithmetic processing unit on Zynq FPGA platform with hardware-software co-design approach using Vedic mathematics algorithms",
-        "Implemented C-based control software for hardware communication over AXI interface, demonstrating IoT platform knowledge and embedded systems programming",
-        "Developed Python testing framework for performance benchmarking and validation of custom algorithms with automated test execution",
-        "Built hardware-software system on FPGA working with actual hardware integration and testing different approaches for optimization"
+        "Automated trading system interacting with Binance APIs",
+        "Implemented asynchronous API interaction for high-performance order execution",
+        "Built order lifecycle management with state tracking",
+        "Designed comprehensive error handling and retry logic"
       ],
-      "keywords": ["FPGA", "hardware", "embedded systems", "SystemVerilog", "Verilog", "HDL", "PYNQ", "Zynq", "Vivado", "python", "c", "IoT", "hardware-software integration", "AXI", "VLSI", "digital design"]
+      "keywords": ["python", "asyncio", "trading", "API", "automation", "backend", "fintech"]
     },
     {
       "id": "proj5",
-      "name": "Single Cycle RISC-V Processor",
-      "technologies": ["SystemVerilog", "Vivado", "C++", "Assembly"],
-      "date": "2024",
+      "name": "RISC-V Performance Profiler",
+      "technologies": ["Python", "C++", "RISC-V", "Spike", "Verilator"],
+      "date": "2025",
       "github": "",
       "description": [
-        "Implemented complete single-cycle RISC-V processor from scratch supporting RV32I instruction set, converting specifications to design implementation",
-        "Designed processor datapath and control logic at circuit level, including memory interface and register file with functional testing and validation",
-        "Developed firmware-level test programs in C and assembly language to verify instruction execution and system correctness",
-        "Performed functional testing converting architecture specifications into working hardware demonstrating understanding of computer architecture"
+        "Instruction trace analysis tool for studying processor performance",
+        "Built Python pipelines for automated performance analysis",
+        "Integrated with Spike and Verilator for RISC-V simulation",
+        "Developed automated trace parsing and reporting workflows"
       ],
-      "keywords": ["RISC-V", "processor", "CPU", "computer architecture", "SystemVerilog", "Verilog", "HDL", "RTL", "digital design", "hardware design", "VLSI", "Vivado", "assembly", "c++", "embedded", "verification"]
+      "keywords": ["RISC-V", "profiling", "performance", "python", "c++", "systems", "tooling", "verilator", "spike"]
     },
     {
       "id": "proj6",
-      "name": "Layered Testbench for Shift Register",
-      "technologies": ["SystemVerilog", "Python", "EDA Playground"],
+      "name": "Conference Management Platform",
+      "technologies": ["Next.js", "TypeScript"],
       "date": "2024",
-      "github": "",
+      "github": "https://github.com/Vaarun-Kamath/PES-IEEE-Conference-Site",
       "description": [
-        "Built comprehensive automated testing framework with transaction-based methodology, generator, and driver components for hardware verification",
-        "Implemented automated test script generation with constrained-random stimulus, executed test cases, and logged results systematically",
-        "Developed validation checks and coverage collection mechanisms to ensure complete functional testing and quality assurance",
-        "Debugged and tracked issues through systematic test execution, demonstrating testing best practices and verification methodologies"
+        "Full-stack conference website for PES IEEE conference",
+        "Implemented backend API integration for conference management",
+        "Built event workflow logic and registration systems",
+        "Designed responsive application architecture"
       ],
-      "keywords": ["verification", "testing", "SystemVerilog", "UVM", "testbench", "test automation", "QA", "quality assurance", "functional testing", "coverage", "hardware verification", "debugging", "validation"]
-    },
-    {
-      "id": "proj7",
-      "name": "ML Classification Systems",
-      "technologies": ["Python", "scikit-learn", "Pandas", "NumPy", "Kaggle"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Developed decision tree and ensemble learning models for classification tasks, implementing feature engineering and model optimization techniques",
-        "Applied machine learning to structured data problems including logic gate classifier, demonstrating ability to identify AI applications across diverse domains",
-        "Completed Kaggle competitions including Titanic survival prediction, gaining practical experience in data preprocessing, feature selection, and model evaluation",
-        "Built ML models handling data preprocessing, model training, and evaluation using cross-validation and performance metrics"
-      ],
-      "keywords": ["machine learning", "ML", "python", "scikit-learn", "pandas", "numpy", "data science", "classification", "kaggle", "data analysis", "feature engineering", "model optimization"]
-    },
-    {
-      "id": "proj8",
-      "name": "Admissions CRM Core",
-      "technologies": ["Next.js 14", "TypeScript", "Supabase", "PostgreSQL", "Edge Functions", "Tailwind CSS"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Developed comprehensive MVP for admissions CRM system with lead management and task workflows using modern serverless architecture with Supabase backend-as-a-service",
-        "Designed normalized SQL schema for leads, applications, and tasks with complex foreign key relationships and constraints ensuring data integrity",
-        "Implemented Row Level Security policies to enforce strict data access: Counselors see only their own or team's leads while Admins have global access",
-        "Developed TypeScript-based Edge Functions using Deno to handle sensitive operations like task creation with input validation and real-time event broadcasting",
-        "Built responsive Next.js frontend that subscribes to database changes for live task updates providing real-time dashboard functionality"
-      ],
-      "keywords": ["full-stack", "web development", "next.js", "typescript", "supabase", "postgresql", "serverless", "edge functions", "RLS", "row level security", "real-time", "CRM", "backend", "frontend", "database design", "tailwind", "deno"]
-    },
-    {
-      "id": "proj9",
-      "name": "PD-YOLOv7: Edge-Optimized Object Detection",
-      "technologies": ["Python", "PyTorch", "OpenCV", "ONNX", "YOLOv7", "Knowledge Distillation", "Quantization"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Optimized YOLOv7 object detection architecture for deployment on resource-constrained edge devices achieving >30 FPS while maintaining mAP@0.5 ≥ 75% on Pascal VOC dataset",
-        "Implemented teacher-student knowledge distillation framework where heavy YOLOv7 model guides smaller student using combined Cross-Entropy and KL Divergence loss",
-        "Developed channel pruning algorithm guided by distillation importance scores reducing model size by >50% through structured pruning techniques",
-        "Applied INT8 quantization-aware training to minimize model footprint and maximize inference speed on edge hardware including NVIDIA Jetson devices",
-        "Conducted research on model compression techniques demonstrating practical deployment of deep learning models on edge computing platforms"
-      ],
-      "keywords": ["AI", "ML", "computer vision", "object detection", "YOLO", "pytorch", "python", "knowledge distillation", "model compression", "pruning", "quantization", "edge computing", "optimization", "deep learning", "research", "ONNX", "OpenCV", "embedded AI"]
-    },
-    {
-      "id": "proj10",
-      "name": "Real-Time Hand Tracking System",
-      "technologies": ["Python", "OpenCV", "NumPy", "Computer Vision"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Built real-time hand tracking and gesture interaction system using classical computer vision techniques achieving >15 FPS on standard CPU hardware without deep learning frameworks",
-        "Engineered custom CV pipeline using HSV color space thresholding for skin detection, Gaussian blurring for noise reduction, and morphological operations for mask refinement",
-        "Implemented contour detection and centroid calculation using image moments to track hand position relative to virtual center boundary",
-        "Designed distance-based state machine with SAFE, WARNING, and DANGER states providing visual feedback loops for gesture-based interaction"
-      ],
-      "keywords": ["computer vision", "opencv", "python", "numpy", "image processing", "hand tracking", "gesture recognition", "real-time", "classical CV", "HSV", "contour detection", "morphological operations", "state machine"]
-    },
-    {
-      "id": "proj11",
-      "name": "Binance Futures Trading Bot",
-      "technologies": ["Python", "python-binance API", "AsyncIO", "REST APIs"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Developed algorithmic trading bot for Binance Futures Testnet capable of executing complex order types and managing portfolio state in real-time",
-        "Implemented order management system supporting Market, Limit, and Stop-Limit orders with strict input validation and comprehensive error handling",
-        "Developed polling mechanism to track order status, open positions, and account balance updates providing real-time monitoring capabilities",
-        "Built secure architecture using environment variable management for API credentials and implemented comprehensive logging for audit trails",
-        "Created interactive CLI interface with colored output for real-time operator feedback and trade execution"
-      ],
-      "keywords": ["fintech", "trading bot", "python", "API", "REST", "asyncio", "automation", "backend", "CLI", "security", "logging", "binance", "cryptocurrency", "algorithmic trading", "order management"]
+      "keywords": ["full-stack", "next.js", "typescript", "conference", "web development"]
     }
   ],
   
   "skills": {
     "programming_languages": {
-      "items": ["Python", "C++", "C", "JavaScript", "TypeScript", "SystemVerilog", "Assembly", "SQL"],
+      "items": ["Python", "Java", "Ruby", "JavaScript", "C++", "SQL"],
       "keywords": ["programming", "coding", "languages", "development", "software"]
     },
-    "ai_ml_frameworks": {
-      "items": ["PyTorch", "TensorFlow", "Hugging Face Transformers", "scikit-learn", "Pandas", "NumPy", "SciPy", "Keras"],
-      "keywords": ["AI", "ML", "machine learning", "deep learning", "artificial intelligence", "data science", "frameworks", "libraries"]
+    "backend": {
+      "items": ["Node.js", "Express", "Spring Boot", "Ruby on Rails", "REST APIs", "WebSockets"],
+      "keywords": ["backend", "server", "API", "web services", "microservices"]
     },
-    "ai_ml_concepts": {
-      "items": ["BERT", "Transformers", "mBERT", "XLM-R", "Fine-tuning LLMs", "Transfer Learning", "NLP", "Natural Language Processing", "Classification", "Regression", "Ensemble Methods", "Neural Networks", "Feature Engineering", "Model Evaluation", "Cross-validation"],
-      "keywords": ["AI", "ML", "machine learning", "deep learning", "NLP", "LLM", "large language models", "natural language", "models", "algorithms"]
+    "databases": {
+      "items": ["PostgreSQL", "Redis", "Prisma ORM"],
+      "keywords": ["database", "SQL", "NoSQL", "ORM", "data storage"]
     },
-    "web_technologies": {
-      "items": ["Next.js", "React", "Node.js", "TypeScript", "JavaScript", "HTML/CSS", "Tailwind CSS", "REST APIs", "Server-side Rendering"],
-      "keywords": ["web development", "full-stack", "frontend", "backend", "web", "API", "REST", "SSR"]
-    },
-    "hardware_embedded": {
-      "items": ["FPGA", "PYNQ", "Zynq", "Vivado", "SystemVerilog", "Verilog", "RISC-V", "Digital VLSI", "RTL Design", "Hardware-Software Integration", "Embedded Systems", "IoT", "AXI Interface"],
-      "keywords": ["hardware", "embedded", "FPGA", "VLSI", "digital design", "HDL", "RTL", "RISC-V", "IoT", "embedded systems", "hardware design", "semiconductors"]
+    "systems_concepts": {
+      "items": ["Authentication", "Authorization", "Background Jobs", "Rate Limiting", "State Management", "Event-driven Systems"],
+      "keywords": ["systems", "architecture", "distributed", "scalability"]
     },
     "tools_platforms": {
-      "items": ["Git", "Linux", "Jupyter Notebooks", "Vivado", "Cadence", "Spike", "Verilator", "RISC-V Toolchain", "EDA Playground"],
-      "keywords": ["tools", "platforms", "version control", "git", "linux", "unix", "IDE", "development tools"]
-    },
-    "data_analysis": {
-      "items": ["Data Preprocessing", "Data Visualization", "matplotlib", "Seaborn", "Statistical Analysis", "ETL Processes", "Data Analysis", "Performance Analysis", "Profiling"],
-      "keywords": ["data", "analysis", "analytics", "statistics", "visualization", "reporting", "data science"]
-    },
-    "core_concepts": {
-      "items": ["Data Structures", "Algorithms", "Computer Architecture", "System Design", "OOP", "Testing", "Debugging", "Performance Optimization", "Verification", "Problem Solving"],
-      "keywords": ["fundamentals", "algorithms", "data structures", "architecture", "design", "testing", "debugging", "optimization", "problem solving"]
+      "items": ["Git", "Linux", "Docker", "Postman"],
+      "keywords": ["tools", "platforms", "version control", "devops", "containers"]
     }
   },
   
@@ -341,8 +269,8 @@
   ],
   
   "research_interests": {
-    "areas": ["Large Language Models", "Fine-tuning techniques", "Knowledge Graphs", "RAG", "AI Agents", "Multi-agent systems", "RISC-V Architecture", "Performance Optimization"],
-    "currently_exploring": ["LangChain ecosystem", "Parameter-efficient fine-tuning methods", "RLHF", "Embedded Systems Optimization"],
-    "goals": "Contribute to cutting-edge AI and systems research with practical business impact, learn from industry experts, and push boundaries of innovation in both AI/ML and embedded systems domains"
+    "areas": ["Backend Engineering", "Distributed Systems", "Real-time Applications", "RISC-V Architecture", "Systems Programming"],
+    "currently_exploring": ["Event-driven architectures", "Message queues", "Database optimization", "RISC-V performance tooling"],
+    "goals": "Build scalable backend systems and contribute to systems-level engineering with practical impact"
   }
 }
