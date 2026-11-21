@@ -3,54 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{{ page.title }} — {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
-  
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Custom CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="/" class="logo">BK.</a>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="{{ site.data.resume.personal_info.linkedin }}" target="_blank">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="wordmark">Bharadhwaj Krishnamoorthy</a>
+      <nav class="site-nav">
+        <a href="/#experience">Experience</a>
+        <a href="/#projects">Work</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#contact">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main>
+  <main class="container" style="padding: 48px 24px;">
     {{ content }}
   </main>
 
-  <footer>
-    <div class="container footer-content">
-      <div class="social-links">
-        <a href="{{ site.data.resume.personal_info.github }}" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="{{ site.data.resume.personal_info.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:{{ site.data.resume.personal_info.email }}"><i class="fas fa-envelope"></i></a>
-      </div>
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Built with Jekyll.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Bharadhwaj Krishnamoorthy</span>
+      <span class="footer-meta">Bengaluru, India</span>
     </div>
   </footer>
-
   <script src="/assets/js/script.js"></script>
 </body>
 </html>

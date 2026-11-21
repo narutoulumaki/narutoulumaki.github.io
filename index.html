@@ -3,767 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharadhwaj K | Portfolio</title>
-    
-    <!-- Google Fonts -->
+    <title>Bharadhwaj Krishnamoorthy — Product, Partnerships & Engineering</title>
+    <meta name="description" content="Builder working at the intersection of product, partnerships, and engineering. Founder's Office Associate at Kplor, with engineering roots in backend systems and RISC-V tooling.">
+    <meta name="author" content="Bharadhwaj Krishnamoorthy">
+    <link rel="canonical" href="https://bharadhwaj-k.tech/">
+
+    <!-- OpenGraph / Social Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bharadhwaj-k.tech/">
+    <meta property="og:title" content="Bharadhwaj Krishnamoorthy — Product, Partnerships & Engineering">
+    <meta property="og:description" content="Builder working at the intersection of product, partnerships, and engineering. Currently in the Founder's Office at Kplor helping institutions scale LMS-ready educational content.">
+    <meta property="og:site_name" content="Bharadhwaj Krishnamoorthy">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bharadhwaj Krishnamoorthy — Product, Partnerships & Engineering">
+    <meta name="twitter:description" content="Builder working at the intersection of product, partnerships, and engineering. Currently in the Founder's Office at Kplor.">
+
+    <!-- Typography: Inter & IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="gradient-bg"></div>
-        <div class="particles" id="particles"></div>
-        <div class="grid-overlay"></div>
-    </div>
-
-    <!-- Cursor Glow Effect -->
-    <div class="cursor-glow" id="cursor-glow"></div>
-
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="loader">
-            <span class="loader-text">BK</span>
-            <div class="loader-bar"></div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-text">&lt;BK/&gt;</span>
-            </a>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            
-            <div class="nav-social">
-                <a href="https://github.com/narutoulumaki" target="_blank" class="social-icon" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/bharadhwajkrishnamoorthy/" target="_blank" class="social-icon" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="wordmark">Bharadhwaj Krishnamoorthy</a>
+            <div class="header-controls">
+                <nav class="site-nav" aria-label="Primary Navigation">
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Work</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+                    <span class="theme-label" id="theme-label">Dark</span>
+                </button>
             </div>
-            
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting" data-aos="fade-up" data-aos-delay="100">
-                    <span class="wave">👋</span> Hi there, I'm
-                </p>
-                <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
-                    <span class="name-gradient">Bharadhwaj K</span>
-                </h1>
-                <h2 class="hero-title" data-aos="fade-up" data-aos-delay="300">
-                    I build <span class="typing-text" id="typing-text"></span><span class="typing-cursor">|</span>
-                </h2>
-                <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
-                    Backend Developer building <span class="highlight">scalable systems</span> and 
-                    <span class="highlight">real-time applications</span>. Experienced with 
-                    <span class="highlight">distributed architectures</span>, 
-                    <span class="highlight">REST APIs</span>, and 
-                    <span class="highlight">RISC-V tooling</span>.
-                </p>
-                <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>View My Work</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>Get In Touch</span>
-                    </a>
+    <main class="container">
+        <!-- Intro / Positioning -->
+        <section class="intro-section" id="about">
+            <div class="meta-line">
+                <span>Bengaluru, India</span>
+                <span class="meta-sep">·</span>
+                <span>Founder's Office at Kplor</span>
+            </div>
+            <h1 class="intro-headline">
+                Builder working at the intersection of product, partnerships, and engineering.
+            </h1>
+            <p class="intro-body">
+                Currently in the Founder's Office at <strong>Kplor</strong> (MindShift Labs Pvt. Ltd.), an AI-powered eLearning content studio, helping institutions scale LMS-ready educational content—with engineering roots in backend systems and RISC-V tooling.
+            </p>
+            <div class="intro-links">
+                <a href="mailto:bharadhwajdace@gmail.com" class="text-link">Email ↗</a>
+                <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy-518165218/" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn ↗</a>
+                <a href="https://github.com/narutoulumaki" target="_blank" rel="noopener noreferrer" class="text-link">GitHub ↗</a>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Experience -->
+        <section class="section" id="experience">
+            <div class="section-grid">
+                <div class="section-sidebar">
+                    <h2 class="section-heading">Experience</h2>
                 </div>
-                <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="10">0</span>+
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="2">0</span>+
-                        <span class="stat-label">Years Exp</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="15">0</span>+
-                        <span class="stat-label">Technologies</span>
+                <div class="section-main">
+                    <div class="timeline">
+                        <!-- Kplor -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company-name">Kplor <span class="company-legal">(MindShift Labs Pvt. Ltd.)</span></h3>
+                                <span class="location-tag">Bengaluru</span>
+                            </div>
+                            <div class="roles-track">
+                                <div class="role-row">
+                                    <span class="role-title">Founder's Office Associate (Product &amp; Partnerships)</span>
+                                    <span class="role-date">Nov 2026 – Present</span>
+                                </div>
+                                <div class="role-row role-previous">
+                                    <span class="role-title">Engineering Intern</span>
+                                    <span class="role-date">Apr 2026 – Nov 2026</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-points">
+                                <li>Driving product workflows and institutional partnerships at an AI-powered eLearning content studio that delivers end-to-end educational courses—combining in-house instructional design, storyboarding, scripting, voice narration, and interactive assessments into LMS-ready, SCORM-compliant formats.</li>
+                                <li>Leading pilot scoping, product demos, client delivery coordination, and market-facing GTM initiatives across academic and enterprise partners.</li>
+                            </ul>
+                        </article>
+
+                        <!-- Commutatus -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company-name">Commutatus</h3>
+                            </div>
+                            <div class="roles-track">
+                                <div class="role-row">
+                                    <span class="role-title">Backend Engineer Intern</span>
+                                    <span class="role-date">Feb 2026</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-points">
+                                <li>Built Ruby on Rails REST APIs, role-based dashboards, and PostgreSQL relational schemas for the Pickleout tournament management platform.</li>
+                                <li>Implemented JWT authentication and resolved routing and production deployment issues.</li>
+                            </ul>
+                        </article>
+
+                        <!-- CHIPS Lab -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company-name">CHIPS Lab, PES University</h3>
+                                <span class="location-tag">Bengaluru</span>
+                            </div>
+                            <div class="roles-track">
+                                <div class="role-row">
+                                    <span class="role-title">Research Intern</span>
+                                    <span class="role-date">May 2025 – 2026</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-points">
+                                <li>Built a cycle-accurate RISC-V performance profiler integrated with OpenHW's <code>cv32e40x</code> core using Python, C/C++, Spike, and Verilator.</li>
+                                <li>Co-authored a research paper accepted at <strong>IEEE HiPC 2025</strong> (International Conference on High Performance Computing).</li>
+                            </ul>
+                        </article>
+
+                        <!-- PES University C2S -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company-name">PES University <span class="company-legal">(C2S Programme with NXP Semiconductors)</span></h3>
+                                <span class="location-tag">Bengaluru</span>
+                            </div>
+                            <div class="roles-track">
+                                <div class="role-row">
+                                    <span class="role-title">Technical Teaching Assistant</span>
+                                    <span class="role-date">Aug 2024 – Jan 2025 &amp; Sep 2025</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-points">
+                                <li>Guided 60+ participants through custom standard cell layout, characterization, and synthesis flows using the SCL 180nm PDK and Cadence tools.</li>
+                            </ul>
+                        </article>
                     </div>
                 </div>
             </div>
-            
-            <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
-                <div class="hero-image-container">
-                    <div class="hero-image-bg"></div>
-                    <div class="hero-avatar">
-                        <div class="avatar-ring"></div>
-                        <div class="avatar-content">
-                            <!-- Add your profile image here -->
-                            <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=400&h=400&fit=crop" alt="Developer" class="profile-img">
+        </section>
+
+        <hr class="divider">
+
+        <!-- Selected Work / Projects -->
+        <section class="section" id="projects">
+            <div class="section-grid">
+                <div class="section-sidebar">
+                    <h2 class="section-heading">Selected Work</h2>
+                </div>
+                <div class="section-main">
+                    <div class="projects-list">
+                        <!-- Project 1: RISC-V Profiler -->
+                        <article class="project-entry">
+                            <div class="project-top">
+                                <div class="project-title-group">
+                                    <h3 class="project-name">PARISCV: Cycle-Accurate RISC-V Performance Profiler</h3>
+                                    <span class="project-badge">IEEE HiPC 2025</span>
+                                </div>
+                                <a href="https://github.com/narutoulumaki/spike-basics" target="_blank" rel="noopener noreferrer" class="project-link">Repository ↗</a>
+                            </div>
+                            <p class="project-summary">
+                                Instruction trace analysis and cycle-accurate hardware profiling pipeline integrated with OpenHW's <code>cv32e40x</code> core. Combines functional instruction execution from Spike with cycle-level RTL simulation in Verilator to identify application-specific execution bottlenecks. Co-authored paper accepted at the 32nd IEEE International Conference on High Performance Computing, Data, and Analytics.
+                            </p>
+                            <div class="project-stack">
+                                <span>Python</span>
+                                <span>C/C++</span>
+                                <span>RISC-V</span>
+                                <span>Spike</span>
+                                <span>Verilator</span>
+                            </div>
+                        </article>
+
+                        <!-- Project 2: AI Code Reviewer -->
+                        <article class="project-entry">
+                            <div class="project-top">
+                                <div class="project-title-group">
+                                    <h3 class="project-name">Automated PR &amp; Code Review Service</h3>
+                                </div>
+                                <a href="https://github.com/narutoulumaki/ai-code-reviewer" target="_blank" rel="noopener noreferrer" class="project-link">GitHub ↗</a>
+                            </div>
+                            <p class="project-summary">
+                                FastAPI backend service that automates multi-language pull request audits via HMAC-SHA256 verified GitHub webhooks. Processes unified PR diffs in asynchronous background workers and enforces strict Pydantic JSON response schemas to surface security vulnerabilities, logic bugs, and line-level refactor suggestions.
+                            </p>
+                            <div class="project-stack">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>Pydantic</span>
+                                <span>GitHub Webhooks</span>
+                                <span>REST APIs</span>
+                            </div>
+                        </article>
+
+                        <!-- Project 3: Onebox Email Scheduler -->
+                        <article class="project-entry">
+                            <div class="project-top">
+                                <div class="project-title-group">
+                                    <h3 class="project-name">Distributed Email Outbox &amp; Job Scheduler</h3>
+                                </div>
+                                <a href="https://github.com/narutoulumaki/Email-outbox-management" target="_blank" rel="noopener noreferrer" class="project-link">GitHub ↗</a>
+                            </div>
+                            <p class="project-summary">
+                                Fault-tolerant outbound email scheduling system engineered with BullMQ and Redis delayed queues instead of volatile cron jobs. Supports configurable per-tenant hourly rate limiting, restart-safe worker recovery, Google OAuth authentication, and bulk CSV recipient ingestion backed by PostgreSQL and Prisma.
+                            </p>
+                            <div class="project-stack">
+                                <span>Node.js</span>
+                                <span>TypeScript</span>
+                                <span>Redis</span>
+                                <span>BullMQ</span>
+                                <span>PostgreSQL</span>
+                                <span>Next.js</span>
+                            </div>
+                        </article>
+
+                        <!-- Project 4: Live Polling System -->
+                        <article class="project-entry">
+                            <div class="project-top">
+                                <div class="project-title-group">
+                                    <h3 class="project-name">Real-Time Classroom Polling Engine</h3>
+                                </div>
+                                <div class="project-links-group">
+                                    <a href="https://live-polling-xi.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">Live ↗</a>
+                                    <a href="https://github.com/narutoulumaki/Live-polling" target="_blank" rel="noopener noreferrer" class="project-link">GitHub ↗</a>
+                                </div>
+                            </div>
+                            <p class="project-summary">
+                                Event-driven classroom polling system built on Socket.io, Express, and PostgreSQL. Maintains server-authoritative countdown timers so late-joining or reconnecting clients synchronize state accurately, while enforcing database-level uniqueness constraints to guarantee single-vote integrity under concurrent load.
+                            </p>
+                            <div class="project-stack">
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                                <span>Socket.io</span>
+                                <span>PostgreSQL</span>
+                                <span>Prisma</span>
+                                <span>Next.js</span>
+                            </div>
+                        </article>
+
+                        <!-- Project 5: PD-YOLOv7 -->
+                        <article class="project-entry">
+                            <div class="project-top">
+                                <div class="project-title-group">
+                                    <h3 class="project-name">PD-YOLOv7: Edge Object Detection Compression</h3>
+                                </div>
+                                <a href="https://github.com/narutoulumaki/PD-YOLOv7-Research" target="_blank" rel="noopener noreferrer" class="project-link">GitHub ↗</a>
+                            </div>
+                            <p class="project-summary">
+                                Deep learning model compression pipeline combining teacher-student knowledge distillation (KL-divergence loss), structured channel pruning, and INT8 quantization-aware training (QAT) to reduce YOLOv7 model footprint and FLOPs for edge deployment with ONNX runtime export.
+                            </p>
+                            <div class="project-stack">
+                                <span>Python</span>
+                                <span>PyTorch</span>
+                                <span>ONNX</span>
+                                <span>Model Compression</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Education -->
+        <section class="section" id="education">
+            <div class="section-grid">
+                <div class="section-sidebar">
+                    <h2 class="section-heading">Education</h2>
+                </div>
+                <div class="section-main">
+                    <article class="education-item">
+                        <div class="education-header">
+                            <h3 class="institution-name">PES University, Bengaluru</h3>
+                            <span class="education-date">2022 – 2026</span>
+                        </div>
+                        <p class="degree-name">B.Tech in Electronics and Communication Engineering</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <div class="section-grid">
+                <div class="section-sidebar">
+                    <h2 class="section-heading">Capabilities</h2>
+                </div>
+                <div class="section-main">
+                    <div class="skills-table">
+                        <div class="skill-row">
+                            <h3 class="skill-group-name">Backend &amp; Web</h3>
+                            <p class="skill-group-list">Python, Node.js, Ruby on Rails, FastAPI, PostgreSQL, Redis, Next.js, REST APIs, Docker</p>
+                        </div>
+                        <div class="skill-row">
+                            <h3 class="skill-group-name">Systems &amp; Hardware</h3>
+                            <p class="skill-group-list">C/C++, RISC-V (Spike, Verilator), SystemVerilog, Linux, Git</p>
+                        </div>
+                        <div class="skill-row">
+                            <h3 class="skill-group-name">Product &amp; EdTech</h3>
+                            <p class="skill-group-list">Product Workflows, SCORM / LMS Standards, Technical Pilots, Institutional Partnerships, GTM</p>
                         </div>
                     </div>
-                    <div class="floating-icons">
-                        <div class="float-icon icon-1"><i class="fab fa-node-js"></i></div>
-                        <div class="float-icon icon-2"><i class="fas fa-database"></i></div>
-                        <div class="float-icon icon-3"><i class="fab fa-python"></i></div>
-                        <div class="float-icon icon-4"><i class="fas fa-microchip"></i></div>
-                        <div class="float-icon icon-5"><i class="fas fa-server"></i></div>
-                    </div>
-                </div>
-                <div class="code-card">
-                    <div class="code-header">
-                        <div class="code-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <span class="code-title">engineer.py</span>
-                    </div>
-                    <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-class">Engineer</span>:
-    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
-        <span class="code-param">self</span>.name = <span class="code-string">"Bharadhwaj"</span>
-        <span class="code-param">self</span>.role = <span class="code-string">"Backend Engineer"</span>
-        <span class="code-param">self</span>.backend = [
-            <span class="code-string">"Node.js"</span>,
-            <span class="code-string">"Rails"</span>
-        ]
-        <span class="code-param">self</span>.systems = [
-            <span class="code-string">"RISC-V"</span>,
-            <span class="code-string">"Distributed"</span>
-        ]</code></pre>
                 </div>
             </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll Down</span>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">02.</span>
-                <span class="title-text">About Me</span>
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <p>
-                        I'm a <span class="highlight">Backend Developer</span> and 
-                        <span class="highlight">Electronics Engineering</span> student 
-                        at PES University with strong foundations in <span class="highlight">systems architecture</span> 
-                        and <span class="highlight">distributed systems</span>.
+        <hr class="divider">
+
+        <!-- Contact / Closing -->
+        <section class="section contact-section" id="contact">
+            <div class="section-grid">
+                <div class="section-sidebar">
+                    <h2 class="section-heading">Contact</h2>
+                </div>
+                <div class="section-main">
+                    <p class="contact-statement">
+                        Working on product and partnerships at Kplor. Always open to conversations around EdTech, product building, and engineering.
                     </p>
-                    <p>
-                        Currently building <span class="highlight">production backend systems</span> with Ruby on Rails, 
-                        while also developing <span class="highlight">RISC-V performance tools</span> at CHIPS Lab. 
-                        I work across the full systems stack.
-                    </p>
-                    <p>
-                        Whether it's designing REST APIs, implementing real-time WebSocket systems, 
-                        or building processor profiling tools, I enjoy engineering robust backend solutions.
-                    </p>
-                    
-                    <div class="about-cards">
-                        <div class="about-card" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="card-content">
-                                <h4>Education</h4>
-                                <p>B.Tech in ECE</p>
-                                <span class="card-meta">PES University • 2022-2026</span>
-                                <span class="badge">CGPA: 7.45/10</span>
-                            </div>
-                        </div>
-                        <div class="about-card" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="card-content">
-                                <h4>Location</h4>
-                                <p>Bangalore, India</p>
-                                <span class="card-meta">Open to opportunities</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-image" data-aos="fade-left">
-                    <div class="image-wrapper">
-                        <div class="image-frame"></div>
-                        <div class="image-placeholder">
-                            <!-- Add your about section image here -->
-                            <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=400&h=500&fit=crop" alt="Coding Setup" class="about-img">
-                        </div>
-                        <div class="image-decoration"></div>
+                    <div class="contact-channels">
+                        <a href="mailto:bharadhwajdace@gmail.com" class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">bharadhwajdace@gmail.com ↗</span>
+                        </a>
+                        <a href="https://linkedin.com/in/bharadhwaj-krishnamoorthy-518165218/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">linkedin.com/in/bharadhwaj-krishnamoorthy-518165218 ↗</span>
+                        </a>
+                        <a href="https://github.com/narutoulumaki" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/narutoulumaki ↗</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section experience-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">03.</span>
-                <span class="title-text">Experience</span>
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="experience-content" data-aos="fade-up" data-aos-delay="100">
-                <div class="exp-tabs">
-                    <button class="exp-tab active" data-tab="commutatus">
-                        <span class="tab-indicator"></span>
-                        Commutatus
-                    </button>
-                    <button class="exp-tab" data-tab="chips">
-                        <span class="tab-indicator"></span>
-                        CHIPS Lab
-                    </button>
-                    <button class="exp-tab" data-tab="pesu">
-                        <span class="tab-indicator"></span>
-                        PES University
-                    </button>
-                </div>
-                
-                <div class="exp-panels">
-                    <div class="exp-panel active" id="panel-commutatus">
-                        <h3 class="exp-title">
-                            Backend Developer Intern <span class="exp-company">@ Commutatus</span>
-                        </h3>
-                        <p class="exp-date">
-                            <i class="far fa-calendar-alt"></i>
-                            Backend Engineering
-                        </p>
-                        <ul class="exp-list">
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Building and maintaining REST APIs using Ruby on Rails for production applications
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Working with relational databases using PostgreSQL and ActiveRecord ORM
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Implementing authentication and authorization logic for secure API endpoints
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Debugging routing, API behavior, and backend logic issues in production codebase
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Contributing to production backend codebase using Git workflows and MVC architecture
-                            </li>
-                        </ul>
-                        <div class="exp-tech">
-                            <span>Ruby on Rails</span>
-                            <span>PostgreSQL</span>
-                            <span>REST APIs</span>
-                            <span>Git</span>
-                        </div>
-                    </div>
-                    
-                    <div class="exp-panel" id="panel-chips">
-                        <h3 class="exp-title">
-                            Research Intern <span class="exp-company">@ CHIPS Lab, PES University</span>
-                        </h3>
-                        <p class="exp-date">
-                            <i class="far fa-calendar-alt"></i>
-                            RISC-V Performance Tooling
-                        </p>
-                        <ul class="exp-list">
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Developing RISC-V instruction trace analysis tools for processor performance profiling
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Building Python pipelines for automated performance analysis and reporting
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Working with Spike and Verilator for RISC-V simulation and validation
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Automating trace parsing workflows and integrating with Azurite RISC-V core
-                            </li>
-                        </ul>
-                        <div class="exp-tech">
-                            <span>Python</span>
-                            <span>C++</span>
-                            <span>RISC-V</span>
-                            <span>Verilator</span>
-                            <span>Linux</span>
-                        </div>
-                    </div>
-                    
-                    <div class="exp-panel" id="panel-pesu">
-                        <h3 class="exp-title">
-                            Teaching Assistant <span class="exp-company">@ PES University</span>
-                        </h3>
-                        <p class="exp-date">
-                            <i class="far fa-calendar-alt"></i>
-                            Chips-to-Startup (C2S) Program with NXP
-                        </p>
-                        <ul class="exp-list">
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Assisted in teaching Standard Cell Design using SCL 180nm PDK
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Guided students through digital design concepts and RTL workflows
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                Supported lab sessions and debugging of design assignments
-                            </li>
-                        </ul>
-                        <div class="exp-tech">
-                            <span>VLSI</span>
-                            <span>Digital Design</span>
-                            <span>RTL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">04.</span>
-                <span class="title-text">Featured Projects</span>
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="projects-grid">
-                <!-- Project 1: Live Polling System -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-project="live-polling">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Live Polling System" class="project-img">
-                        <div class="project-image-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Backend System</span>
-                        <h3 class="project-title">Live Polling System</h3>
-                        <p class="project-description">
-                            Real-time backend system for classroom polling using WebSockets with 
-                            server-authoritative timers and database constraints for vote integrity.
-                        </p>
-                        <div class="project-tech">
-                            <span>Node.js</span>
-                            <span>Express</span>
-                            <span>WebSockets</span>
-                            <span>PostgreSQL</span>
-                            <span>Prisma</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2: Onebox Email Scheduler -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-project="email-scheduler">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&h=400&fit=crop" alt="Email Scheduler" class="project-img">
-                        <div class="project-image-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Backend System</span>
-                        <h3 class="project-title">Onebox Email Scheduler</h3>
-                        <p class="project-description">
-                            Backend system for scheduled email delivery using Redis job queues,
-                            delayed background processing, and restart-safe job recovery.
-                        </p>
-                        <div class="project-tech">
-                            <span>Node.js</span>
-                            <span>Express</span>
-                            <span>Redis</span>
-                            <span>BullMQ</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3: Book Recommendation Microservice -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-project="book-recommendations">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop" alt="Book Recommendations" class="project-img">
-                        <div class="project-image-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Microservice</span>
-                        <h3 class="project-title">Book Recommendation Microservice</h3>
-                        <p class="project-description">
-                            Backend microservice implementing recommendation logic with REST API architecture, 
-                            relational schema design, and JWT authentication.
-                        </p>
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>PostgreSQL</span>
-                            <span>JWT</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4: Binance Futures Trading Bot -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-project="binance-bot">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" alt="Trading Bot" class="project-img">
-                        <div class="project-image-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Systems Engineering</span>
-                        <h3 class="project-title">Binance Futures Trading Bot</h3>
-                        <p class="project-description">
-                            Automated trading system with asynchronous API interaction, 
-                            order lifecycle management, and comprehensive error handling.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>AsyncIO</span>
-                            <span>REST APIs</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5: RISC-V Performance Profiler -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-project="riscv-profiler">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="RISC-V Profiler" class="project-img">
-                        <div class="project-image-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Systems Tooling</span>
-                        <h3 class="project-title">RISC-V Performance Profiler</h3>
-                        <p class="project-description">
-                            Instruction trace analysis tool for studying processor performance 
-                            using Spike and Verilator simulation.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>C++</span>
-                            <span>RISC-V</span>
-                            <span>Verilator</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6: Conference Management Platform -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-project="ieee-conference">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Conference Site" class="project-img">
-                        <div class="project-image-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Full-Stack Application</span>
-                        <h3 class="project-title">Conference Management Platform</h3>
-                        <p class="project-description">
-                            Full-stack conference website for PES IEEE with backend API integration 
-                            and event workflow logic.
-                        </p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>TypeScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="projects-cta" data-aos="fade-up">
-                <a href="https://github.com/narutoulumaki" target="_blank" class="btn btn-secondary">
-                    <i class="fab fa-github"></i>
-                    <span>View All Projects on GitHub</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">05.</span>
-                <span class="title-text">Skills & Technologies</span>
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="skills-grid">
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Languages</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-gem"></i>
-                            <span>Ruby</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>C++</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3>Backend</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>Express</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-leaf"></i>
-                            <span>Spring Boot</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-gem"></i>
-                            <span>Ruby on Rails</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-plug"></i>
-                            <span>REST APIs</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-bolt"></i>
-                            <span>WebSockets</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3>Databases</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-memory"></i>
-                            <span>Redis</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Prisma ORM</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>Systems Concepts</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-lock"></i>
-                            <span>Auth</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-tasks"></i>
-                            <span>Background Jobs</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>Rate Limiting</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-broadcast-tower"></i>
-                            <span>Event-driven</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Tools</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-linux"></i>
-                            <span>Linux</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-paper-plane"></i>
-                            <span>Postman</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2 class="section-title center" data-aos="fade-up">
-                <span class="title-number">06.</span>
-                <span class="title-text">Get In Touch</span>
-            </h2>
-            
-            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
-                <p class="contact-text">
-                    I'm currently looking for new opportunities. Whether you have a question, 
-                    want to collaborate on a project, or just want to say hi, my inbox is always open!
-                </p>
-                
-                <a href="mailto:bharadhwajdace@gmail.com" class="btn btn-primary btn-large">
-                    <i class="fas fa-paper-plane"></i>
-                    <span>Say Hello</span>
-                </a>
-                
-                <div class="contact-social">
-                    <a href="https://github.com/narutoulumaki" target="_blank" class="contact-social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/bharadhwajkrishnamoorthy/" target="_blank" class="contact-social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="mailto:bharadhwajdace@gmail.com" class="contact-social-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Modal -->
-    <div class="modal-overlay" id="project-modal">
-        <div class="modal-content">
-            <button class="modal-close" id="modal-close">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-header">
-                <div class="modal-icon" id="modal-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="modal-title-group">
-                    <span class="modal-label" id="modal-label">Project</span>
-                    <h3 class="modal-title" id="modal-title">Project Title</h3>
-                </div>
-            </div>
-            <div class="modal-body">
-                <p class="modal-description" id="modal-description">Project description goes here.</p>
-                <div class="modal-features">
-                    <h4>Key Features</h4>
-                    <ul id="modal-features-list"></ul>
-                </div>
-                <div class="modal-tech" id="modal-tech"></div>
-                <div class="modal-links" id="modal-links"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>Designed & Built by <span class="highlight">Bharadhwaj K</span></p>
-            <p class="footer-sub">Built with <i class="fas fa-heart"></i> using vanilla HTML, CSS & JS</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>Bharadhwaj Krishnamoorthy</span>
+            <span class="footer-meta">Bengaluru, India</span>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

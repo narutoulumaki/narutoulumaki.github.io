@@ -1,276 +1,113 @@
 {
   "personal_info": {
-    "name": "BHARADHWAJ KRISHNAMOORTHY",
+    "name": "Bharadhwaj Krishnamoorthy",
     "email": "bharadhwajdace@gmail.com",
-    "phone": "+91-9487423881",
-    "linkedin": "https://linkedin.com/in/bharadhwaj-krishnamoorthy",
+    "linkedin": "https://linkedin.com/in/bharadhwaj-krishnamoorthy-518165218/",
     "github": "https://github.com/narutoulumaki",
-    "location": "Bangalore, India",
-    "portfolio": ""
+    "location": "Bengaluru, India",
+    "portfolio": "https://bharadhwaj-k.tech/"
   },
-  
   "education": [
     {
       "id": "edu1",
       "institution": "PES University",
-      "degree": "Bachelor of Technology in Electronics and Communication Engineering",
-      "location": "Bangalore, India",
-      "graduation_date": "June 2026",
-      "cgpa": "7.45/10.0",
-      "relevant_coursework": [
-        "Machine Learning Applications",
-        "Deep Learning Fundamentals",
-        "High Performance Computing",
-        "Data Structures and Algorithms",
-        "Database Management Systems",
-        "Cryptography",
-        "Computer Architecture",
-        "Digital VLSI Design",
-        "RISC-V",
-        "Verification of Digital Systems",
-        "VLSI Testing",
-        "Computer-Aided Digital Design"
-      ],
-      "keywords": ["electronics", "communication", "engineering", "btech", "ECE", "VLSI", "embedded", "digital systems"]
+      "degree": "B.Tech in Electronics and Communication Engineering",
+      "location": "Bengaluru, India",
+      "duration": "2022 – 2026"
     }
   ],
-  
   "experience": [
     {
-      "id": "exp0",
-      "company": "Commutatus",
-      "position": "Backend Developer Intern",
-      "location": "Remote",
-      "start_date": "Present",
-      "end_date": "Present",
-      "achievements": [
-        "Building and maintaining REST APIs using Ruby on Rails for production applications",
-        "Working with relational databases using PostgreSQL and ActiveRecord ORM",
-        "Implementing authentication and authorization logic for secure API endpoints",
-        "Debugging routing, API behavior, and backend logic issues in production codebase",
-        "Contributing to production backend codebase using Git workflows and MVC architecture",
-        "Understanding MVC architecture, controllers, services, and database models"
-      ],
-      "keywords": ["backend", "ruby", "rails", "postgresql", "REST", "API", "authentication", "authorization", "git", "MVC", "ActiveRecord"]
-    },
-    {
       "id": "exp1",
-      "company": "CHIPS Lab, PES University",
-      "position": "Research Intern",
-      "location": "Bangalore, India",
-      "start_date": "May 2025",
-      "end_date": "Present",
-      "achievements": [
-        "Developing RISC-V instruction trace analysis tools for processor performance profiling",
-        "Building Python pipelines for automated performance analysis and reporting",
-        "Working with Spike and Verilator for RISC-V simulation and validation",
-        "Automating trace parsing workflows and integrating with Azurite RISC-V core"
+      "company": "Kplor (MindShift Labs Pvt. Ltd.)",
+      "location": "Bengaluru",
+      "roles": [
+        {
+          "position": "Founder's Office Associate (Product & Partnerships)",
+          "duration": "Nov 2026 – Present"
+        },
+        {
+          "position": "Engineering Intern",
+          "duration": "Apr 2026 – Nov 2026"
+        }
       ],
-      "keywords": ["research", "python", "c++", "performance", "analysis", "RISC-V", "profiling", "Verilator", "Spike", "linux"]
+      "achievements": [
+        "Driving product workflows and institutional partnerships at an AI-powered eLearning content studio that delivers end-to-end educational courses—combining in-house instructional design, storyboarding, scripting, voice narration, and interactive assessments into LMS-ready, SCORM-compliant formats.",
+        "Leading pilot scoping, product demos, client delivery coordination, and market-facing GTM initiatives across academic and enterprise partners."
+      ]
     },
     {
       "id": "exp2",
-      "company": "PES University",
-      "position": "Teaching Assistant",
-      "location": "Bangalore, India",
-      "start_date": "Aug 2024",
-      "end_date": "Jan 2025",
+      "company": "Commutatus",
+      "position": "Backend Engineer Intern",
+      "duration": "Feb 2026",
       "achievements": [
-        "Assisted in teaching Standard Cell Design using SCL 180nm PDK under Government of India's C2S Programme with NXP Semiconductors",
-        "Guided students through digital design concepts and RTL workflows",
-        "Supported lab sessions and debugging of design assignments"
-      ],
-      "keywords": ["teaching", "TA", "mentor", "VLSI", "digital design", "RTL", "NXP", "semiconductors"]
+        "Built Ruby on Rails REST APIs, role-based dashboards, and PostgreSQL relational schemas for the Pickleout tournament management platform.",
+        "Implemented JWT authentication and resolved routing and production deployment issues."
+      ]
+    },
+    {
+      "id": "exp3",
+      "company": "CHIPS Lab, PES University",
+      "position": "Research Intern",
+      "duration": "May 2025 – 2026",
+      "achievements": [
+        "Built a cycle-accurate RISC-V performance profiler integrated with OpenHW's cv32e40x core using Python, C/C++, Spike, and Verilator.",
+        "Co-authored a research paper accepted at IEEE HiPC 2025 (International Conference on High Performance Computing)."
+      ]
+    },
+    {
+      "id": "exp4",
+      "company": "PES University (C2S Programme with NXP Semiconductors)",
+      "position": "Technical Teaching Assistant",
+      "duration": "Aug 2024 – Jan 2025 & Sep 2025",
+      "achievements": [
+        "Guided 60+ participants through custom standard cell layout, characterization, and synthesis flows using the SCL 180nm PDK and Cadence tools."
+      ]
     }
   ],
-  
   "projects": [
     {
       "id": "proj1",
-      "name": "Live Polling System",
-      "technologies": ["Node.js", "Express", "WebSockets", "PostgreSQL", "Prisma"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Real-time backend system for classroom polling using WebSockets",
-        "Implemented server-authoritative timers for synchronized poll sessions",
-        "Designed database constraints for vote integrity and session management",
-        "Built reconnection handling for seamless user experience"
-      ],
-      "keywords": ["backend", "real-time", "websockets", "node.js", "express", "postgresql", "prisma", "polling", "server"]
+      "name": "PARISCV: Cycle-Accurate RISC-V Performance Profiler",
+      "badge": "IEEE HiPC 2025",
+      "technologies": ["Python", "C/C++", "RISC-V", "Spike", "Verilator"],
+      "github": "https://github.com/narutoulumaki/spike-basics",
+      "description": "Instruction trace analysis and cycle-accurate hardware profiling pipeline integrated with OpenHW's cv32e40x core. Co-authored paper accepted at IEEE HiPC 2025."
     },
     {
       "id": "proj2",
-      "name": "Onebox Email Scheduler",
-      "technologies": ["Node.js", "Express", "Redis", "BullMQ", "PostgreSQL"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Backend system for scheduled email delivery using Redis job queues",
-        "Implemented delayed background processing with BullMQ",
-        "Built rate limiting for email delivery management",
-        "Designed restart-safe job recovery mechanisms"
-      ],
-      "keywords": ["backend", "redis", "queue", "bullmq", "node.js", "express", "email", "scheduling", "background jobs"]
+      "name": "Automated PR & Code Review Service",
+      "technologies": ["Python", "FastAPI", "Pydantic", "GitHub Webhooks", "REST APIs"],
+      "github": "https://github.com/narutoulumaki/ai-code-reviewer",
+      "description": "FastAPI backend service that automates multi-language pull request audits via HMAC-SHA256 verified GitHub webhooks and structured Pydantic schemas."
     },
     {
       "id": "proj3",
-      "name": "Book Recommendation Microservice",
-      "technologies": ["Java", "Spring Boot", "PostgreSQL", "JWT"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Backend microservice implementing recommendation logic",
-        "Designed REST API architecture with proper endpoint structure",
-        "Implemented relational schema design for books and user preferences",
-        "Built JWT authentication and API validation"
-      ],
-      "keywords": ["backend", "java", "spring boot", "microservice", "REST", "API", "postgresql", "jwt", "authentication"]
+      "name": "Distributed Email Outbox & Job Scheduler",
+      "technologies": ["Node.js", "TypeScript", "Redis", "BullMQ", "PostgreSQL", "Next.js"],
+      "github": "https://github.com/narutoulumaki/Email-outbox-management",
+      "description": "Fault-tolerant outbound email scheduling system engineered with BullMQ and Redis delayed queues, per-tenant hourly rate limiting, and restart-safe worker recovery."
     },
     {
       "id": "proj4",
-      "name": "Binance Futures Trading Bot",
-      "technologies": ["Python", "AsyncIO", "REST APIs"],
-      "date": "2024",
-      "github": "",
-      "description": [
-        "Automated trading system interacting with Binance APIs",
-        "Implemented asynchronous API interaction for high-performance order execution",
-        "Built order lifecycle management with state tracking",
-        "Designed comprehensive error handling and retry logic"
-      ],
-      "keywords": ["python", "asyncio", "trading", "API", "automation", "backend", "fintech"]
+      "name": "Real-Time Classroom Polling Engine",
+      "technologies": ["TypeScript", "Node.js", "Socket.io", "PostgreSQL", "Prisma", "Next.js"],
+      "github": "https://github.com/narutoulumaki/Live-polling",
+      "demo": "https://live-polling-xi.vercel.app",
+      "description": "Event-driven classroom polling system with server-authoritative countdown timers and database-level uniqueness constraints for single-vote integrity."
     },
     {
       "id": "proj5",
-      "name": "RISC-V Performance Profiler",
-      "technologies": ["Python", "C++", "RISC-V", "Spike", "Verilator"],
-      "date": "2025",
-      "github": "",
-      "description": [
-        "Instruction trace analysis tool for studying processor performance",
-        "Built Python pipelines for automated performance analysis",
-        "Integrated with Spike and Verilator for RISC-V simulation",
-        "Developed automated trace parsing and reporting workflows"
-      ],
-      "keywords": ["RISC-V", "profiling", "performance", "python", "c++", "systems", "tooling", "verilator", "spike"]
-    },
-    {
-      "id": "proj6",
-      "name": "Conference Management Platform",
-      "technologies": ["Next.js", "TypeScript"],
-      "date": "2024",
-      "github": "https://github.com/Vaarun-Kamath/PES-IEEE-Conference-Site",
-      "description": [
-        "Full-stack conference website for PES IEEE conference",
-        "Implemented backend API integration for conference management",
-        "Built event workflow logic and registration systems",
-        "Designed responsive application architecture"
-      ],
-      "keywords": ["full-stack", "next.js", "typescript", "conference", "web development"]
+      "name": "PD-YOLOv7: Edge Object Detection Compression",
+      "technologies": ["Python", "PyTorch", "ONNX", "Model Compression"],
+      "github": "https://github.com/narutoulumaki/PD-YOLOv7-Research",
+      "description": "Deep learning model compression pipeline combining teacher-student knowledge distillation, structured channel pruning, and INT8 quantization-aware training."
     }
   ],
-  
   "skills": {
-    "programming_languages": {
-      "items": ["Python", "Java", "Ruby", "JavaScript", "C++", "SQL"],
-      "keywords": ["programming", "coding", "languages", "development", "software"]
-    },
-    "backend": {
-      "items": ["Node.js", "Express", "Spring Boot", "Ruby on Rails", "REST APIs", "WebSockets"],
-      "keywords": ["backend", "server", "API", "web services", "microservices"]
-    },
-    "databases": {
-      "items": ["PostgreSQL", "Redis", "Prisma ORM"],
-      "keywords": ["database", "SQL", "NoSQL", "ORM", "data storage"]
-    },
-    "systems_concepts": {
-      "items": ["Authentication", "Authorization", "Background Jobs", "Rate Limiting", "State Management", "Event-driven Systems"],
-      "keywords": ["systems", "architecture", "distributed", "scalability"]
-    },
-    "tools_platforms": {
-      "items": ["Git", "Linux", "Docker", "Postman"],
-      "keywords": ["tools", "platforms", "version control", "devops", "containers"]
-    }
-  },
-  
-  "achievements": [
-    {
-      "id": "ach1",
-      "title": "Security Lead, Maaya 2024",
-      "description": "Managed 50-person security team for 5,000+ attendee concert, coordinating logistics, demonstrating project management, leadership, problem-solving skills, and ensuring smooth event execution",
-      "date": "2024",
-      "keywords": ["leadership", "team management", "project management", "event", "coordination", "logistics", "problem solving", "communication", "collaboration"]
-    },
-    {
-      "id": "ach2",
-      "title": "Student Body Head (School)",
-      "description": "Elected Student Body Head representing 800+ students, organizing school-wide technical and cultural events, developing communication and organizational abilities, showcasing collaborative leadership",
-      "date": "2020",
-      "keywords": ["leadership", "student leader", "elected", "organization", "communication", "collaboration", "teamwork", "event management"]
-    },
-    {
-      "id": "ach3",
-      "title": "CBSE National Level Athlete",
-      "description": "Competed at national level athletics championships representing state, demonstrating discipline, dedication, self-driven mindset, and performance under pressure",
-      "date": "2019-2020",
-      "keywords": ["athletics", "sports", "national level", "competition", "discipline", "dedication", "performance", "achievement"]
-    },
-    {
-      "id": "ach4",
-      "title": "Technical Workshop Instructor - NXP Semiconductors Programme",
-      "description": "Taught 5-day Intensive Educational Programme on Standard Cell Design using SCL PDK 180nm under Government of India's C2S Programme in collaboration with NXP Semiconductors",
-      "date": "2024-2025",
-      "keywords": ["teaching", "workshop", "instructor", "NXP", "semiconductors", "VLSI", "IC design", "government programme", "training", "mentor"]
-    },
-    {
-      "id": "ach5",
-      "title": "Research Experience in Performance Analysis",
-      "description": "Conducting research on RISC-V performance analysis and optimization at CHIPS research lab, working on cutting-edge processor technology",
-      "date": "2025",
-      "keywords": ["research", "RISC-V", "performance", "optimization", "embedded systems", "innovation", "academia"]
-    },
-    {
-      "id": "ach6",
-      "title": "Active GitHub Profile with Technical Projects",
-      "description": "Maintained active GitHub presence with multiple technical projects demonstrating continuous learning, experimentation with new technologies, and open-source contribution mindset",
-      "date": "Ongoing",
-      "keywords": ["github", "open source", "projects", "continuous learning", "self-driven", "technical", "portfolio"]
-    }
-  ],
-  
-  "certifications": [
-    {
-      "id": "cert1",
-      "name": "Standard Cell Design Workshop - NXP Semiconductors",
-      "issuer": "PES University / NXP / Government of India C2S Programme",
-      "date": "2024-2025",
-      "keywords": ["VLSI", "IC design", "NXP", "semiconductors", "standard cell", "workshop", "certification"]
-    }
-  ],
-  
-  "responsibilities": [
-    {
-      "id": "resp1",
-      "organization": "Maaya 2024 - PES University",
-      "position": "Security Lead",
-      "duration": "2024",
-      "description": "Managed 50-person security team for 5,000+ attendee concert coordinating logistics and ensuring event success",
-      "keywords": ["leadership", "event management", "team lead", "security", "coordination", "extracurricular"]
-    },
-    {
-      "id": "resp2",
-      "organization": "School Student Body",
-      "position": "Student Body Head",
-      "duration": "2020",
-      "description": "Elected leader representing 800+ students, organizing technical and cultural events school-wide",
-      "keywords": ["leadership", "student leader", "elected", "organization", "extracurricular"]
-    }
-  ],
-  
-  "research_interests": {
-    "areas": ["Backend Engineering", "Distributed Systems", "Real-time Applications", "RISC-V Architecture", "Systems Programming"],
-    "currently_exploring": ["Event-driven architectures", "Message queues", "Database optimization", "RISC-V performance tooling"],
-    "goals": "Build scalable backend systems and contribute to systems-level engineering with practical impact"
+    "backend_and_web": ["Python", "Node.js", "Ruby on Rails", "FastAPI", "PostgreSQL", "Redis", "Next.js", "REST APIs", "Docker"],
+    "systems_and_hardware": ["C/C++", "RISC-V (Spike, Verilator)", "SystemVerilog", "Linux", "Git"],
+    "product_and_edtech": ["Product Workflows", "SCORM / LMS Standards", "Technical Pilots", "Institutional Partnerships", "GTM"]
   }
 }

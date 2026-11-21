@@ -1,56 +1,52 @@
 ---
-layout: page
+layout: default
 title: "About"
 permalink: /about/
 ---
 
-I am **Bharadhwaj Krishnamoorthy**, an engineer focused on embedded systems, RISC-V, and full-stack development. I am currently based in Bangalore, India.
+# Bharadhwaj Krishnamoorthy
 
-## Education
+**Location:** Bengaluru, India  
+**Current Role:** Founder's Office Associate (Product & Partnerships) at **Kplor** (MindShift Labs Pvt. Ltd.)
 
-**PES University**  
-*Bachelor of Technology in Electronics and Communication Engineering*  
-*Bangalore, India | Graduation: June 2026*  
-**CGPA:** 7.29/10.0  
-
-**Relevant Coursework:**  
-Machine Learning Applications, Deep Learning Fundamentals, High Performance Computing, Data Structures and Algorithms, Database Management Systems, Cryptography, Computer Architecture, Digital VLSI Design, RISC-V, Verification of Digital Systems, VLSI Testing, Computer-Aided Digital Design.
+Builder working at the intersection of product, partnerships, and engineering. Currently in the Founder's Office at Kplor helping institutions scale LMS-ready educational content, with engineering roots in backend systems and RISC-V tooling.
 
 ## Experience
 
-**CHIPS, PES University**  
-*Research Intern*  
-*Bangalore, India | May 2025 - Present*  
-- Conducting research on performance analysis and optimization techniques for RISC-V systems.
-- Developing cycle-accurate profiling tool using Python and C++, analyzing processor performance and system-level behavior.
-- Building Python automation scripts for data collection, preprocessing, and automated analysis pipelines.
-- Integrating profiler with InCore's Azurite core, performing testing and validation.
-- Implementing data visualization for performance analysis using matplotlib.
+### Kplor (MindShift Labs Pvt. Ltd.) — *Bengaluru*
+- **Founder's Office Associate (Product & Partnerships)** | Nov 2026 – Present
+- **Engineering Intern** | Apr 2026 – Nov 2026
+- Driving product workflows and institutional partnerships at an AI-powered eLearning content studio that delivers end-to-end educational courses—combining in-house instructional design, storyboarding, scripting, voice narration, and interactive assessments into LMS-ready, SCORM-compliant formats.
+- Leading pilot scoping, product demos, client delivery coordination, and market-facing GTM initiatives across academic and enterprise partners.
 
-**PES University**  
-*Teaching Assistant*  
-*Bangalore, India | Aug 2024 - Jan 2025*  
-- Technical Teaching Assistant for 5-day IEP on Standard Cell Design using SCL PDK 180nm under Government of India's C2S Programme with NXP Semiconductors.
-- Guided 60+ participants through complete backend flow including custom layout, characterization, and synthesis.
-- Conducted technical workshops and lab sessions for 60+ students on RTL-to-GDS flow and digital design concepts.
+### Commutatus
+- **Backend Engineer Intern** | Feb 2026
+- Built Ruby on Rails REST APIs, role-based dashboards, and PostgreSQL relational schemas for the Pickleout tournament management platform.
+- Implemented JWT authentication and resolved routing and production deployment issues.
+
+### CHIPS Lab, PES University
+- **Research Intern** | May 2025 – 2026
+- Built a cycle-accurate RISC-V performance profiler integrated with OpenHW's `cv32e40x` core using Python, C/C++, Spike, and Verilator.
+- Co-authored a research paper accepted at **IEEE HiPC 2025** (International Conference on High Performance Computing).
+
+### PES University (C2S Programme with NXP Semiconductors)
+- **Technical Teaching Assistant** | Aug 2024 – Jan 2025 & Sep 2025
+- Guided 60+ participants through custom standard cell layout, characterization, and synthesis flows using the SCL 180nm PDK and Cadence tools.
+
+## Education
+
+- **B.Tech in Electronics and Communication Engineering**, PES University, Bengaluru (2022 – 2026)
 
 ## Skills
 
-- **Programming Languages:** Python, C++, C, JavaScript, TypeScript, SystemVerilog, Assembly, SQL
-- **AI/ML Frameworks:** PyTorch, TensorFlow, Hugging Face Transformers, scikit-learn, Pandas, NumPy, SciPy, Keras
-- **Web Technologies:** Next.js, React, Node.js, TypeScript, JavaScript, HTML/CSS, Tailwind CSS, REST APIs
-- **Hardware & Embedded:** FPGA, PYNQ, Zynq, Vivado, SystemVerilog, Verilog, RISC-V, Digital VLSI, RTL Design, IoT
-- **Tools & Platforms:** Git, Linux, Jupyter Notebooks, Vivado, Cadence, Spike, Verilator, RISC-V Toolchain
+- **Backend & Web:** Python, Node.js, Ruby on Rails, FastAPI, PostgreSQL, Redis, Next.js, REST APIs, Docker
+- **Systems & Hardware:** C/C++, RISC-V (Spike, Verilator), SystemVerilog, Linux, Git
+- **Product & EdTech:** Product Workflows, SCORM / LMS Standards, Technical Pilots, Institutional Partnerships, GTM
 
-## Achievements
+## Contact
 
-- **Security Lead, Maaya 2024:** Managed 50-person security team for 5,000+ attendee concert.
-- **Student Body Head (School):** Elected Student Body Head representing 800+ students (2020).
-- **CBSE National Level Athlete:** Competed at national level athletics championships (2019-2020).
-- **Technical Workshop Instructor:** Taught 5-day Intensive Educational Programme on Standard Cell Design.
+Working on product and partnerships at Kplor. Always open to conversations around EdTech, product building, and engineering.
 
-## Connect with me
-
-- [GitHub](https://github.com/narutoulumaki)
-- [LinkedIn](https://linkedin.com/in/bharadhwaj-krishnamoorthy)
-- Email: [bharadhwajdace@gmail.com](mailto:bharadhwajdace@gmail.com)
+- **Email:** [bharadhwajdace@gmail.com](mailto:bharadhwajdace@gmail.com)
+- **LinkedIn:** [linkedin.com/in/bharadhwaj-krishnamoorthy-518165218](https://linkedin.com/in/bharadhwaj-krishnamoorthy-518165218/)
+- **GitHub:** [github.com/narutoulumaki](https://github.com/narutoulumaki)

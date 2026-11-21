@@ -1,13 +1,6 @@
 ---
-layout: home
+layout: default
 title: "Home"
 ---
 
-Welcome to my portfolio. I am **Bharadhwaj Krishnamoorthy**, a passionate engineer interested in **RISC-V**, **Hardware Verification**, and **Full-Stack Development**.
-
-I am currently a Research Intern at CHIPS, PES University, working on performance analysis and optimization techniques for RISC-V systems.
-
-Check out my work:
-- [Projects](/projects/)
-- [About Me](/about/)
-- [Blog](/blog/)
+Builder working at the intersection of product, partnerships, and engineering. Currently in the Founder's Office at **Kplor** (MindShift Labs Pvt. Ltd.) helping institutions scale LMS-ready educational content, with engineering roots in backend systems and RISC-V tooling.
